@@ -1,4 +1,6 @@
 # joybox
 
-este es el proyecto
-actualizo
+Dani: cena
+bianca: desayuno
+may: merienda
+uri: almuerzo
