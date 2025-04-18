@@ -1,6 +1,6 @@
 # joybox
 
 Dani: cena
-bianca: desayuno
+bian: desayuno
 may: merienda
 uri: almuerzo
