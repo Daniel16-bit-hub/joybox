@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoyBox - Desayunos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #b7d9ff; #el fondo pricnipal del titulo 
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        section {
+            margin: 20px;
+        }
+        h2 {
+            color: #110982; #titulo desayuno 
+        }
+        .place {
+            margin-bottom: 40px;
+        }
+        .place img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .place iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            border-radius: 8px;
+        }
+        .place p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .place a {
+            color: #2630f1; #el link para lo del sitio web 
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .place a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenidos a JoyBox</h1>
+    <p>Tu guía de los mejores 5 lugares para desayunar en Buenos Aires</p>
+</header>
+
+<section>
+
+    <h1> DESAYUNOS</h1>
+    <h3> Desayunos que despiertan los sentidos!! Nuestra selección combina ingredientes frescos, recetas artesanales y una presentación cuidada para ofrecerte una experiencia matutina inolvidable. Ideal para consentirte o sorprender a alguien especial.</h3>
+
+    <!-- Pertutti -->
+    <div class="place">
+        <h2>1-Pertutti</h2>
+        <p>Disfruta de un desayuno delicioso en Pertutti, conocido por su ambiente acogedor y variedad de opciones para comenzar el día.</p>
+        <p><a href="https://www.pertutti.com.ar" target="_blank">Visita su sitio web!</a></p>
+        <img src="WhatsApp-Image-2021-09-29-at-11.27.23-1.jpeg" alt="pertutti" width="300" height="200">
+        <p> Encuentra Pertutti fácilmente: </p>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.330343607002!2d-58.39907602439359!3d-34.59580727295712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca96695db245%3A0x1ffe205afcfe933a!2sPertutti!5e0!3m2!1ses-419!2sar!4v1744827129695!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy"></iframe>
+         </div>
+
+    <!-- Le Pain Quotidien -->
+    <div class="place">
+        <h2>2-Le Pain Quotidien</h2>
+        <p>Le Pain Quotidien ofrece un ambiente tranquilo y saludable, ideal para disfrutar de un desayuno orgánico y delicioso!</p>
+        <p><a href="https://www.lepainquotidien.com/ar/es" target="_blank">Visita su sitio web</a></p>
+        <img src="panes-1200x800.jpg" alt="Le Pain Quotidien">
+        <p> Encuentra Le Pain Quotidien fácilmente: </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.633296877609!2d-58.38893412439398!3d-34.58814417295991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaa4d9ca67a7%3A0x83d2c9fb1a908106!2sLe%20Pain%20Quotidien!5e0!3m2!1ses-419!2sar!4v1744827278414!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Tea Connection -->
+    <div class="place">
+        <h1>3-Tea Connection</h1>
+        <p>Tea Connection es el lugar perfecto para quienes buscan opciones saludables y deliciosas en su desayuno!</p>
+        <p><a href="https://www.teaconnection.com.ar/?srsltid=AfmBOopo2BvV73MXNM6V2cyETXQU1CysZA5KI1p_51vdkV9XRVS5jjWG" target="_blank">Visita su sitio web</a></p>
+        <img src="BANNER_DOUBLEDETOX_2.webp" alt="Tea Connection">
+        <p>Encuentra Tea Connection fácilmente: </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45012.365842191764!2d-58.47206502370476!3d-34.59834528325344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9a538e49dcb%3A0x5792e7f1901a7ef3!2sTea%20Connection%20Formosa!5e0!3m2!1ses-419!2sar!4v1744827361851!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Café Martinez -->
+    <div class="place">
+        <h1>4-Café Martinez</h1>
+        <p>Café Martinez te invita a tener una experiencia única de sabor y calidez. Disfrutá de cafés de calidad, delicias artesanales y un ambiente acogedor que invita a quedarte!</p>
+        <p><a href="https://www.cafemartinez.com/nuestro-cafe/cafe-molido?utm_source=google&utm_medium=cpc&utm_campaign=Pmaxmolido&utm_term=ImgVideo&utm_content=unificado&gad_source=1&gclid=CjwKCAjw8IfABhBXEiwAxRHlsM9xD9txy9511lrXEkKmSXaRh_EcHn3NJ8r96DyMxGBAuijgTWEZRxoChrAQAvD_BwE" target="_blank">Visita su sitio web</a></p>
+        <img src="Gnota_40586-1.webp" alt="Café Martinez">
+        <p> Encuentra a Café Martinez fácilmente: </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26267.16580874056!2d-58.492872777307845!3d-34.61943874836976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9ed8a687f4b%3A0xc2e9a38d40e8f4b7!2zQ2Fmw6kgTWFydMOtbmV6!5e0!3m2!1ses-419!2sar!4v1744827453196!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </iframe>
+    </div>
+
+
+
+    <!-- Starbucks -->
+    <div class="place">
+        <h1>5-Starbucks</h1>
+        <p>Starbucks ofrece una experiencia internacional con su variedad de cafés y opciones para desayunar!</p>
+        <p><a href="https://www.starbucks.com.ar" target="_blank">Visita su sitio web</a></p>
+        <img src="-1x-1.webp" alt="Starbucks">
+        <p> Encuentra a Starbucks fácilmente: </p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26267.16580874056!2d-58.492872777307845!3d-34.61943874836976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9ed8a687f4b%3A0xc2e9a38d40e8f4b7!2zQ2Fmw6kgTWFydMOtbmV6!5e0!3m2!1ses-419!2sar!4v1744827453196!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+    
+ 
