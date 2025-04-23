@@ -8,17 +8,24 @@ body {
 h1 {
     color: #ff4d4d;
     font-size: 2.5em;
+    text-decoration: underline;
+}
+
+
+h2 {
+    color: #000000;
+    font-size: 2.5em;
 }
 
 
 h3 {
-    color: #333;
+    color: #000000;
     font-size: 1.5em;
 }
 
 
 h4 {
-    color: #666;
+    color: #000000;
     margin-bottom: 20px;
 }
 
@@ -45,23 +52,6 @@ body {
 }
 
 
-h1 {
-    color: #000000;
-    font-size: 2.5em;
-}
-
-
-h3 {
-    color: #333;
-    font-size: 1.5em;
-}
-
-
-h4 {
-    color: #666;
-    margin-bottom: 20px;
-}
-
 
 table {
     margin: 10px auto;
@@ -75,10 +65,10 @@ td {
     padding: 10px;
     font-weight: bold;
 }
+
+
 form {
     text-align: left;
 
 
 }
-
-
