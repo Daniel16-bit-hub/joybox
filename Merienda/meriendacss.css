@@ -55,3 +55,8 @@ div.mail {
 tr.mailizq {
   text-align: left;  
 }
+
+ul {
+  display: inline-block;
+  text-align: left;   
+}
