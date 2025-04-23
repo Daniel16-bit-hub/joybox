@@ -1,3 +1,7 @@
+body {
+background-color: aliceblue;
+}
+
 title {
   color: aqua;
 
@@ -6,7 +10,29 @@ title {
 h1 {
   font-style: italic;
   text-align: center;
+  font-size: 50px;
+  text-decoration: underline;
 }
+
+h2 {
+  text-align: center;
+  font-style: italic;
+  font-size: 30px;
+}
+
+p {
+  text-align: center;
+}
+
+table {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  margin: 10px auto;
+  border: 2px solid #333;
+  border-collapse: collapse;
+  width: 1000px;
+}
+
 .contenido-extra {
   max-height: 0;
   overflow: hidden;
