@@ -30,6 +30,12 @@ h4 {
 }
 
 
+ol {
+    display: inline-block;
+    text-align: left;   
+}
+
+
 table {
     margin: 10px auto;
     border: 2px solid #333;
