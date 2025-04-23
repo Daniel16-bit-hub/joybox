@@ -33,6 +33,11 @@ table {
   width: 1000px;
 }
 
+iframe{
+  width: 300px;
+  height: 200px;
+}
+
 .contenido-extra {
   max-height: 0;
   overflow: hidden;
