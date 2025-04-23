@@ -1,0 +1,33 @@
+.contenido-extra {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  label {
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  input[type="checkbox"]:checked + .contenido-extra {
+    max-height: 500px;
+  }
+  
+  input[type="checkbox"]:checked + .contenido-extra + label::after {
+    content: " Ocultar menú";
+  }
+  
+  label::after {
+    content: "Vea el menú aquí:";
+  }
+  
+  table {
+    margin-bottom: 30px;
+  }
+  
