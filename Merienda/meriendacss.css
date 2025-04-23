@@ -47,3 +47,11 @@ iframe{
 input[type="checkbox"]:checked ~ .contenido-extra {
   max-height: 500px;
 }
+
+div.mail {
+  text-align: left;
+}
+
+tr.mailizq {
+  text-align: left;  
+}
