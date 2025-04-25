@@ -1,10 +1,7 @@
 body {
-background-color: aliceblue;
-}
-
-title {
-  color: aqua;
-
+  font-family: Arial, sans-serif;
+  background-color: aliceblue;
+  padding: 20px;
 }
 
 h1 {
@@ -23,38 +20,78 @@ h2 {
 h3 {
   text-align: center;
   font-style: italic;
-  font-size: 30px;  
+  font-size: 30px;
 }
 
 p {
   text-align: center;
 }
 
-table {
-  text-align: center;
-  background-color: rgb(255, 255, 255);
-  margin: 10px auto;
-  border: 2px solid #333;
-  border-collapse: collapse;
-  width: 1000px;
+ul {
+  display: inline-block;
+  text-align: left;
 }
 
-iframe{
-  width: 300px;
-  height: 200px;
+.info-box {
+  text-align: center;
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 15px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+}
+
+
+.place {
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 900px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+
+.media-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.media-container img,
+.media-container iframe {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (min-width: 600px) {
+  .media-container img,
+  .media-container iframe {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+iframe {
+  border: 0;
 }
 
 .contenido-extra {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
+  background-color: #f0f8ff;
+  padding: 15px;
+  margin: 10px auto;
+  border-left: 5px solid #007acc;
+  max-width: 600px;
+  border-radius: 5px;
 }
 
-input[type="checkbox"]:checked ~ .contenido-extra {
-  max-height: 500px;
-}
 
-ul {
-  display: inline-block;
-  text-align: left;   
-}
+
+
