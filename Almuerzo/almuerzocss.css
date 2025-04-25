@@ -1,9 +1,9 @@
 body {
-    background-color: rgb(160, 230, 30);
+    background-color: rgb(255, 253, 253);
     }
     
     title {
-      color: rgb(255, 0, 0);
+      color: rgb(255, 211, 211);
     
     }
     
@@ -32,7 +32,7 @@ body {
     
     table {
       text-align: center;
-      background-color: rgb(0, 159, 239);
+      background-color: rgb(233, 251, 101);
       margin: 10px auto;
       border: 2px solid #333;
       border-collapse: collapse;
