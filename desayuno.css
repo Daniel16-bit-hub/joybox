@@ -1,75 +1,60 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e3f2fd; /* celeste claro */
-    color: #0d47a1; /* azul profundo */
-    margin: 0;
-    padding: 20px;
+background-color: aliceblue;
 }
 
-/* Títulos */
+title {
+  color: aqua;
+
+}
+
 h1 {
-    text-align: center;
-    color: #01579b;
-    font-size: 2.5em;
-    margin-bottom: 10px;
+  font-style: italic;
+  text-align: center;
+  font-size: 50px;
+  text-decoration: underline;
 }
 
 h2 {
-    color: #0277bd;
-    margin-top: 30px;
+  text-align: center;
+  font-style: italic;
+  font-size: 30px;
 }
 
 h3 {
-    text-align: center;
-    font-weight: normal;
-    margin-bottom: 40px;
+  text-align: center;
+  font-style: italic;
+  font-size: 30px;  
 }
 
-/* Bloques por lugar */
-.place {
-    background-color: #ffffff;
-    border: 1px solid #bbdefb;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+p {
+  text-align: center;
 }
 
-/* Galería de medios */
-.media-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 15px;
+table {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  margin: 10px auto;
+  border: 2px solid #333;
+  border-collapse: collapse;
+  width: 1000px;
 }
 
-.media-container img,
-.media-container iframe {
-    max-width: 100%;
-    border-radius: 8px;
+iframe{
+  width: 300px;
+  height: 200px;
 }
 
-@media (min-width: 600px) {
-    .media-container img,
-    .media-container iframe {
-        width: 300px;
-        height: 200px;
-    }
+.contenido-extra {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
 }
 
-/* Detalles de menú */
-.contenido-extra ul {
-    margin-top: 10px;
-    list-style-type: square;
-    padding-left: 20px;
+input[type="checkbox"]:checked ~ .contenido-extra {
+  max-height: 500px;
 }
 
-a {
-    color: #039be5;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+ul {
+  display: inline-block;
+  text-align: left;   
 }
