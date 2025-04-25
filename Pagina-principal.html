@@ -4,67 +4,197 @@
     <meta charset="UTF-8">
     <title>JoyBox</title>
     <link rel="stylesheet" href="pag-principal-css.css">
+        <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f1f8fd;
+            margin: 0;
+            padding: 0;
+            color: #0d47a1;
+        }
+
+        header {
+            background: linear-gradient(to right, #e1f5fe, #b3e5fc);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #90caf9;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        .header-text {
+            text-align: left;
+        }
+
+        .header-text h1 {
+            font-size: 2.8em;
+            margin: 0;
+            color: #01579b;
+        }
+
+        .header-text h2 {
+            font-size: 1.3em;
+            margin-top: 5px;
+            color: #0277bd;
+        }
+
+        main {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        main h3 {
+            font-size: 1.8em;
+            color: #01579b;
+            margin-bottom: 10px;
+        }
+
+        main p {
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #0d47a1;
+        }
+
+        ol {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            padding-left: 20px;
+            color: #0d47a1;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .option-btn {
+            background-color: #4fc3f7;
+            padding: 15px 30px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.1em;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .option-btn:hover {
+            background-color: #0288d1;
+        }
+
+        form {
+            text-align: center;
+            padding: 20px;
+            background-color: #e3f2fd;
+            margin: 0 auto;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            color: #01579b;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            border: 1px solid #90caf9;
+            border-radius: 6px;
+            font-size: 1em;
+            background-color: #ffffff;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            background-color: #0288d1;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 1em;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #01579b;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1em;
+            color: #0277bd;
+            padding-bottom: 20px;
+
+        }
+    </style>
 </head>
 <body>
 
 
+
 <header>
-    <h1>Joybox</h1>
-    <h2>Una caja llena de sorpresas!!!</h2>
-    <hr>
-    <h3>¿Quiénes somos?</h3>
-    <h4>JoyBox es una forma original de regalar una experiencia inolvidable a tu ser querido o amigo!!!</h4>
-    <h3>¿Cómo se usa?</h3>
-    <h4>
-        <ol>
-            <li>Fijate qué combo te gustaría comer (Almuerzo, merienda, etc)</li>
-            <li>Hacé lick en la categoría y verás los restaurantes aderidos</li>
-            <li>Revisa qué combo de restaurante te gustaría probar</li>
-            <li>Reserva el día y horario</li>
-            <li>Disfruta</li>
-        </ol>
-    </h4>
+    <div class="header-text">
+        <h1>JoyBox</h1>
+        <h2>¡Una caja llena de sorpresas!</h2>
+    </div>
+    <img src="1db0a77b-46fa-47bb-8099-63e24130a1f5.jpg" alt="Logo Sabores de Acá" class="logo">
 </header>
-<hr>
 
+<main>
+    <h3>¿Quiénes somos?</h3>
+    <p>JoyBox es una forma original de regalar una experiencia inolvidable a tu ser querido o amigo.</p>
 
-<section>
-    <h4>Elija una opción:</h4>
+    <h3>¿Cómo se usa?</h3>
+    <ol>
+        <li>Elegí qué combo te gustaría (desayuno, merienda, etc.)</li>
+        <li>Hacé clic en la categoría y explorá los restaurantes adheridos</li>
+        <li>Revisá qué combo querés probar</li>
+        <li>Reservá el día y horario</li>
+        <li>¡Y a disfrutar!</li>
+    </ol>
 
+    <h3>Elegí una opción:</h3>
+    <div class="options">
+        <a href="desayuno.html" class="option-btn">Desayuno</a>
+        <a href="#" class="option-btn">Almuerzo</a>
+        <a href="Merienda/merienda.html" class="option-btn">Merienda</a>
+        <a href="#" class="option-btn">Cena</a>
+    </div>
 
-    <table>
-        <tr><td><a href="desayuno.html">Desayuno</td></tr>
-    </table>
+    <form>
+        <h3>¿Ya sabés qué regalar?</h3>
+        <p>Dejanos tu mail y comentario para darte todos los detalles de compra</p>
 
+        <label for="email">Email:</label>
+        <input type="text" id="email" placeholder="ejemplo@email.com">
 
-    <table>
-        <tr><td>Almuerzo</td></tr>
-    </table>
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" rows="6" placeholder="Dejanos tu comentario..."></textarea>
 
+        <input type="submit" value="Enviar">
+    </form>
+</main>
 
-    <table>
-        <tr><td><a href="Merienda/merienda.html">Merienda</a></td></tr>
-    </table>
-
-
-    <table>
-        <tr><td>Cena</td></tr>
-    </table>
-</section>
-
-
-
-<hr>
-<h5>¿Ya sabes que regalar? Contanos mandando tu mail junto a tu opción para dar todos los detalles de la compra</h5>
-<form>
-    <label for="nombre" >Email:</label>
-    <input type="text" id="nombre">
-    <br>
-    <label for="Comentario">Comentario:</label>
-    <br>
-    <textarea name="Comentario" id="nombre" rows="11"  placeholder="dejanos tu comentario..."></textarea>
-    <input type="submit" value="Enviar">
-</form>
+<footer>
+    © 2025 JoyBox - Sabores de Acá
+</footer>
 
 </body>
 </html>
+
