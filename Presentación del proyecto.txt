@@ -7,7 +7,7 @@ La actividad principal es del sector terciario, ya que ofrecemos servicios de co
 c) Cuáles son los objetivos del sitio web que se desarrolló
 Los objetivos son los de satisfacer una necesidad. La necesidad de poder regalar algo simple y rápido, que sirva tanto para el que regala como para el que lo recibe.
 d) Justificación de la elección de la tipografía y paleta de colores
-Usamos una paleta de colores
+Usamos una paleta de colores más fuertes que la versión anterior. Le dimos más fuerza a la página, dando tonos fuertes naranja para acompañar la idea de modernidad y de algo nuevo y brillante.
 e) Público objetivo: edad, sexo, aficiones, inquietudes, nacionalidad, poder
 adquisitivo, etc
 Edad: 20 a 55 años
