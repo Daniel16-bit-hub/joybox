@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pertutti - Joybox</title>
+  <link rel="stylesheet" href="pertutti.css">
+</head>
+<body>
+
+  <h1>Pertutti</h1>
+  <img src="WhatsApp-Image-2021-09-29-at-11.27.23-1.jpeg" alt="Pertutti">
+  
+  <div class="content">
+    <p>Disfrutá de un desayuno delicioso en Pertutti, conocido por su ambiente acogedor y variedad de opciones para comenzar el día.</p>
+
+    <h2>🧺 ¿Qué incluye el desayuno Joybox?</h2>
+    <ul>
+      <li>Café con leche o té.</li>
+      <li>3 medialunas artesanales.</li>
+      <li>Jugo de naranja natural.</li>
+    </ul>
+
+    <div class="horarios">
+      <h3>🕗 Horarios</h3>
+      <p><strong>Lunes a Viernes:</strong> 8:00 - 12:00 hs<br>
+         <strong>Sábados y Domingos:</strong> 8:30 - 13:00 hs</p>
+    </div>
+
+    <h2>📍 Ubicación</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.330343607002!2d-58.39907602439359!3d-34.59580727295712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca96695db245%3A0x1ffe205afcfe933a!2sPertutti!5e0!3m2!1ses-419!2sar!4v1744827129695!5m2!1ses-419!2$ar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="botones-centrados">
+      <button class="btn-sec" onclick="mostrarOpiniones()">⭐ Ver opiniones</button>
+      <button class="btn-sec" onclick="mostrarReserva()">📅 Reservar mesa</button>
+    </div>
+
+    <!-- Opiniones -->
+    <div class="opiniones" id="opiniones">
+      <h3>⭐ Opiniones de clientes</h3>
+      <div class="opinion">
+        <p><strong>Lucía:</strong> <span class="stars">★★★★★</span><br>¡Excelente atención y las medialunas riquísimas!</p>
+      </div>
+      <div class="opinion">
+        <p><strong>Julián:</strong> <span class="stars">★★★★☆</span><br>Muy lindo lugar, el café llegó un poco frío.</p>
+      </div>
+      <div class="opinion">
+        <p><strong>Carla:</strong> <span class="stars">★★★★★</span><br>Ambiente tranquilo y buena música.</p>
+      </div>
+      <div class="opinion">
+        <p><strong>Fernando:</strong> <span class="stars">★★★☆☆</span><br>Esperaba más del jugo natural, pero estuvo bien.</p>
+      </div>
+    </div>
+
+    <!-- Formulario Opinión -->
+    <div class="formulario" id="formulario">
+      <h3>📝 Dejá tu opinión</h3>
+      <form id="formOpiniones">
+        <label for="nombre">Tu nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="estrellas">Puntaje:</label>
+        <select id="estrellas" name="estrellas" required>
+          <option value="">Seleccionar</option>
+          <option value="5">★★★★★</option>
+          <option value="4">★★★★☆</option>
+          <option value="3">★★★☆☆</option>
+          <option value="2">★★☆☆☆</option>
+          <option value="1">★☆☆☆☆</option>
+        </select>
+
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+        <input type="submit" value="Enviar opinión">
+        <div class="mensaje-exito" id="exito-opinion">¡Gracias por tu opinión!</div>
+      </form>
+    </div>
+
+    <!-- Formulario Reserva -->
+    <div class="reserva" id="reserva">
+      <h3>📅 Reservá tu mesa</h3>
+      <form id="formReserva">
+        <label for="nombre-reserva">Nombre:</label>
+        <input type="text" id="nombre-reserva" name="nombre-reserva" required>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required>
+
+        <label for="mensaje">Mensaje opcional:</label>
+        <textarea id="mensaje" name="mensaje" rows="3" placeholder="¿Algo que quieras contarnos?"></textarea>
+
+        <input type="submit" value="Reservar">
+        <div class="mensaje-exito" id="exito-reserva">¡Reserva realizada con éxito!</div>
+      </form>
+    </div>
+
+    <a href="desayuno2.html" class="btn">⬅ Volver a los desayunos</a>
+  </div>
+
+  <script>
+    function mostrarOpiniones() {
+      document.getElementById("opiniones").style.display = "block";
+      document.getElementById("formulario").style.display = "block";
+      document.getElementById("reserva").style.display = "none";
+    }
+
+    function mostrarReserva() {
+      document.getElementById("reserva").style.display = "block";
+      document.getElementById("opiniones").style.display = "none";
+      document.getElementById("formulario").style.display = "none";
+    }
+
+    document.getElementById("formOpiniones").addEventListener("submit", function(e) {
+      e.preventDefault();
+      this.reset();
+      document.getElementById("exito-opinion").style.display = "block";
+      setTimeout(() => document.getElementById("exito-opinion").style.display = "none", 3000);
+    });
+
+    document.getElementById("formReserva").addEventListener("submit", function(e) {
+      e.preventDefault();
+      this.reset();
+      document.getElementById("exito-reserva").style.display = "block";
+      setTimeout(() => document.getElementById("exito-reserva").style.display = "none", 3000);
+    });
+  </script>
+
+</body>
+</html>
