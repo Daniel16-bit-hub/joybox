@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tea Connection - Joybox</title>
+  <link rel="stylesheet" href="tea-connection.css">
+</head>
+<body>
+
+  <h1>Tea Connection</h1>
+  <img src="BANNER_DOUBLEDETOX_2.webp" alt="Tea Connection">
+
+  <div class="content">
+    <p>Un espacio moderno y saludable, con opciones vegetarianas y una gran variedad de tés de todo el mundo. Ideal para comenzar el día con energía natural.</p>
+
+    <h2>🧺 ¿Qué incluye el desayuno Joybox?</h2>
+    <ul>
+      <li>🍵 Té verde o chai latte.</li>
+      <li>🥑 Avocado toast con huevo.</li>
+      <li>🍓 Bowl de frutas con granola.</li>
+      <li>🍪 Galletas de avena y chocolate.</li>
+      <li>🥐 Mini croissant de manteca.</li>
+    </ul>
+
+    <h2>📍 Ubicación</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45012.365842191764!2d-58.47206502370476!3d-34.59834528325344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9a538e49dcb%3A0x5792e7f1901a7ef3!2sTea%20Connection%20Formosa!5e0!3m2!1ses-419!2sar!4v1744827361851!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="botones-centrados">
+      <button class="btn-sec" onclick="mostrarOpiniones()">⭐ Ver opiniones</button>
+      <button class="btn-sec" onclick="mostrarReserva()">📅 Reservar mesa</button>
+    </div>
+
+    <div class="opiniones" id="opiniones">
+      <h3>⭐ Opiniones de clientes</h3>
+      <div class="opinion">
+        <p><strong>Julieta:</strong> <span class="stars">★★★★★</span><br>El mejor desayuno saludable de la ciudad. ¡El chai es increíble!</p>
+      </div>
+      <div class="opinion">
+        <p><strong>Nico:</strong> <span class="stars">★★★★☆</span><br>Todo muy rico, ideal para arrancar tranqui el día.</p>
+      </div>
+      <div class="opinion">
+        <p><strong>Vicky:</strong> <span class="stars">★★★★★</span><br>Me encantó el bowl con frutas frescas y el toque natural del lugar.</p>
+      </div>
+    </div>
+
+    <div class="formulario" id="formulario">
+      <h3>📝 Dejá tu opinión</h3>
+      <form id="formOpiniones">
+        <label for="nombre">Tu nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="estrellas">Puntaje:</label>
+        <select id="estrellas" name="estrellas" required>
+          <option value="">Seleccionar</option>
+          <option value="5">★★★★★</option>
+          <option value="4">★★★★☆</option>
+          <option value="3">★★★☆☆</option>
+          <option value="2">★★☆☆☆</option>
+          <option value="1">★☆☆☆☆</option>
+        </select>
+
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+        <input type="submit" value="Enviar opinión">
+        <div class="mensaje-exito" id="exito-opinion">¡Gracias por tu opinión!</div>
+      </form>
+    </div>
+
+    <div class="reserva" id="reserva">
+      <h3>📅 Reservá tu mesa</h3>
+      <form id="formReserva">
+        <label for="nombre-reserva">Nombre:</label>
+        <input type="text" id="nombre-reserva" name="nombre-reserva" required>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required>
+
+        <label for="mensaje">Mensaje opcional:</label>
+        <textarea id="mensaje" name="mensaje" rows="3" placeholder="¿Algo que quieras contarnos?"></textarea>
+
+        <input type="submit" value="Reservar">
+        <div class="mensaje-exito" id="exito-reserva">¡Reserva realizada con éxito!</div>
+      </form>
+    </div>
+
+    <a href="desayuno.html" class="btn">⬅ Volver a los desayunos</a>
+  </div>
+
+  <script>
+    function mostrarOpiniones() {
+      document.getElementById("opiniones").style.display = "block";
+      document.getElementById("formulario").style.display = "block";
+      document.getElementById("reserva").style.display = "none";
+    }
+
+    function mostrarReserva() {
+      document.getElementById("reserva").style.display = "block";
+      document.getElementById("opiniones").style.display = "none";
+      document.getElementById("formulario").style.display = "none";
+    }
+
+    document.getElementById("formOpiniones").addEventListener("submit", function(e) {
+      e.preventDefault();
+      this.reset();
+      document.getElementById("exito-opinion").style.display = "block";
+      setTimeout(() => document.getElementById("exito-opinion").style.display = "none", 3000);
+    });
+
+    document.getElementById("formReserva").addEventListener("submit", function(e) {
+      e.preventDefault();
+      this.reset();
+      document.getElementById("exito-reserva").style.display = "block";
+      setTimeout(() => document.getElementById("exito-reserva").style.display = "none", 3000);
+    });
+  </script>
+
+</body>
+</html>
