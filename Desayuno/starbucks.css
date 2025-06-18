@@ -30,18 +30,46 @@ ul {
   padding-left: 20px;
 }
 
-.btn {
+.btn, .btn-sec {
   display: inline-block;
-  background-color: #00704a;
+  background: linear-gradient(145deg, #00704a, #019e6b);
   color: white;
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 30px;
-  margin-top: 30px;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  border: none;
 }
 
-.btn:hover {
-  background-color: #005837;
+.btn:hover, .btn-sec:hover {
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #005837, #018659);
+}
+
+.botones-centrados {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.horarios {
+  background-color: #eaf3ee;
+  padding: 15px 20px;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.horarios h3 {
+  margin-top: 0;
+  color: #00704a;
 }
 
 iframe {
@@ -50,4 +78,72 @@ iframe {
   border: 0;
   margin-top: 20px;
   border-radius: 15px;
+}
+
+.opiniones, .formulario, .reserva {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  display: none;
+}
+
+.opiniones h3, .formulario h3, .reserva h3 {
+  color: #00704a;
+}
+
+.opinion {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.stars {
+  color: gold;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="date"], input[type="time"], textarea, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 1em;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #00704a;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  margin-top: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #005837;
+}
+
+.mensaje-exito {
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-weight: bold;
+  display: none;
 }
