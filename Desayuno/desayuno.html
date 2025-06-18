@@ -1,150 +1,196 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Desayuno</title>
-  <link rel="stylesheet" href="./Desayuno.css">
+  <meta charset="UTF-8" />
+  <title>Joybox Desayunos</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <section>
-    <h1>Desayuno</h1>
-    <p>Desayunos que despiertan los sentidos! Nuestra selección ideal para consentirte o sorprender a alguien especial.</p>
-  </section>
-  <table>
-    <tr>
-      <td>
-        Información sobre este Joybox:
-        <br>
-        <ul>
-          <li>El valor es de 85.000.</li>
-          <li>El menú incluye un desayuno para dos personas.</li>
-          <li>En cada restaurante vas a tener la opción de ver el menú que ofrece. Revisa bien antes de comprar.</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-  <h2>Nuestros lugares para merendar</h2>
 
-  <!-- Pertutti -->
-  <table>
-    <tr>
-      <td>
-        <h2>Pertutti</h2>
-        <p>Disfrutá de un desayuno delicioso en Pertutti, conocido por su ambiente acogedor y variedad de opciones para comenzar el día.</p>
-        <img src="WhatsApp-Image-2021-09-29-at-11.27.23-1.jpeg" width="300" height="200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.330343607002!2d-58.39907602439359!3d-34.59580727295712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca96695db245%3A0x1ffe205afcfe933a!2sPertutti!5e0!3m2!1ses-419!2sar!4v1744827129695!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <br>
-        <label for="menu1">Ver menú</label>
-        <input type="checkbox" id="menu1">
-        <div class="contenido-extra">
-          <p>El menú incluye:</p>
-          <ul>
-            <li>Café con leche o té.</li>
-            <li>3 medialunas artesanales.</li>
-            <li>Jugo de naranja natural.</li>
-          </ul>
-        </div>
-      </td>
-    </tr>
+  <h1>Joybox Desayunos</h1>
+  <h2 id="saludo-js"></h2>
+  <p class="subtitle">Desayunos que despiertan los sentidos 🌅✨</p>
+  <p id="frase-dia"></p>
 
-  </table>
-  <br>
-  <!-- Le Pain Quotidien  -->
-  <table>
-    <tr>
-      <td>
-        <h2>Le Pain Quotidien</h2>
-        <p>Panadería belga con productos orgánicos y un desayuno europeo inigualable en un ambiente rústico y relajado.</p>
-        <img src="panes-1200x800.jpg" width="300" height="200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.633296877609!2d-58.38893412439398!3d-34.58814417295991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaa4d9ca67a7%3A0x83d2c9fb1a908106!2sLe%20Pain%20Quotidien!5e0!3m2!1ses-419!2sar!4v1744827278414!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="info-box">
+    <strong>Información general del Joybox:</strong>
+    <ul>
+      <li>Valor: $85.000.</li>
+      <li>Incluye desayuno para 2 personas.</li>
+      <li>En cada restaurante podés ver el menú ofrecido antes de comprar.</li>
+    </ul>
+  </div>
 
-        <br>
-        <label for="menu2">Ver menú:</label>
-        <input type="checkbox" id="menu2">
-        <div class="contenido-extra">
-          <p>El menú incluye:</p>
-          <ul>
-            <li>Tostadas de pan artesanal con mermelada y manteca.</li>
-            <li>Café orgánico o té.</li>
-            <li>Jugo de frutas orgánico.</li>  
-          </ul>
-        </div>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <!-- Tea Connection -->
-  <table>
-    <tr>
-      <td>
-        <h2>Tea Connection</h2>
-        <p>Un espacio moderno y saludable, con opciones vegetarianas y variedad de tés de todo el mundo..</p>
-        <img src="BANNER_DOUBLEDETOX_2.webp" width="300" height="200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45012.365842191764!2d-58.47206502370476!3d-34.59834528325344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9a538e49dcb%3A0x5792e7f1901a7ef3!2sTea%20Connection%20Formosa!5e0!3m2!1ses-419!2sar!4v1744827361851!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <br>
-        <label for="menu3">Ver menú</label>
-        <input type="checkbox" id="menu3">
-        <div class="contenido-extra">
-          <p>El menú incluye:</p>
-          <ul>
-          <li>Té verde o chai latte.</li>
-          <li>Avocado toast con huevo.</li>
-          <li>Bowl de frutas con granola.</li>
-          </ul>
-        </div>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <!-- Café Martinez -->
-  <table>
-    <tr>
-      <td>
+  <div class="grid">
+
+    <!-- Café Martinez -->
+    <div class="card">
+      <img src="Gnota_40586-1.webp" alt="Café Martinez" />
+      <div class="card-content">
         <h2>Café Martinez</h2>
-        <p>Una cafetería argentina con tradición, ideal para disfrutar de un desayuno clásico con excelente café y pastelería artesanal.</p>
-        <img src="Gnota_40586-1.webp" width="300" height="200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26267.16580874056!2d-58.492872777307845!3d-34.61943874836976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9ed8a687f4b%3A0xc2e9a38d40e8f4b7!2zQ2Fmw6kgTWFydMOtbmV6!5e0!3m2!1ses-419!2sar!4v1744827453196!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <br>
-        <label for="menu4">Ver menú</label>
-        <input type="checkbox" id="menu4">
-        <div class="contenido-extra">
-          <p>El menú incluye:</p>
-          <ul>
-            <li>Café de especialidad a elección (flat white, cappuccino o cold brew).</li>
-            <li>Cookie casera con chips de chocolate.</li>
-            <li>Tarta individual de frutas frescas.</li>
-            <li>Yogur natural con mix de semillas y granola.</li>
-            <li>Infusión o jugo natural.</li>
-          </ul>
-        </div>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <!-- Starbucks -->
-  <table>
-    <tr>
-      <td>
+        <p>Tradición argentina, café de especialidad y pastelería artesanal en un ambiente cálido.</p>
+        <a href="cafe-martinez.html" class="btn">Conocer más</a>
+      </div>
+    </div>
+
+    <!-- Starbucks -->
+    <div class="card">
+      <img src="-1x-1.webp" alt="Starbucks" />
+      <div class="card-content">
         <h2>Starbucks</h2>
-        <p>La reconocida cadena internacional que ofrece cafés especiales, opciones dulces y saladas, y un ambiente moderno ideal para comenzar el día.</p>
-        <img src="-1x-1.webp" width="300" height="200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23136.523916068116!2d-58.51621871456772!3d-34.61230711149797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7d733248683%3A0xb7e3c6427af0c7ba!2sStarbucks!5e0!3m2!1ses-419!2sar!4v1744827423583!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <br>
-        <label for="menu5">Ver menú</label>
-        <input type="checkbox" id="menu5">
-        <div class="contenido-extra">
-          <p>El menú incluye:</p>
-          <ul>
-            <li>2 cafés a elección (latte, americano o capuchino).</li>
-            <li>1 muffin de arándanos.</li>
-            <li>1 tostado en pan de campo.</li>
-            <li>1 jugo de naranja.</li>
-          </ul>
-        </div>
-      </td>
-    </tr>
-  </table>
+        <p>Café internacional con opciones dulces y saladas, ideal para empezar el día con energía.</p>
+        <a href="starbucks.html" class="btn">Conocer más</a>
+      </div>
+    </div>
 
+    <!-- Pertutti -->
+    <div class="card">
+      <img src="WhatsApp-Image-2021-09-29-at-11.27.23-1.jpeg" alt="Pertutti" />
+      <div class="card-content">
+        <h2>Pertutti</h2>
+        <p>Ambiente acogedor y desayuno abundante con medialunas, jugo y café artesanal.</p>
+        <a href="pertutti.html" class="btn">Conocer más</a>
+      </div>
+    </div>
 
+    <!-- Le Pain Quotidien -->
+    <div class="card">
+      <img src="panes-1200x800.jpg" alt="Le Pain Quotidien" />
+      <div class="card-content">
+        <h2>Le Pain Quotidien</h2>
+        <p>Panadería belga con productos orgánicos, tostadas con mermeladas y café europeo.</p>
+        <a href="le-pain.html" class="btn">Conocer más</a>
+      </div>
+    </div>
+
+    <!-- Tea Connection -->
+    <div class="card">
+      <img src="BANNER_DOUBLEDETOX_2.webp" alt="Tea Connection" />
+      <div class="card-content">
+        <h2>Tea Connection</h2>
+        <p>Opciones saludables con avocado toast, bowls de frutas y tés del mundo.</p>
+        <a href="tea-connection.html" class="btn">Conocer más</a>
+      </div>
+    </div>
+
+  </div>
+
+  
+  <form id="formulario">
+    <h3>Dejanos tu opinión ☕</h3>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required />
+    <p id="msgNombre" style="color: red;"></p>
+
+    <label for="opinion">Tu opinión:</label>
+    <textarea id="opinion" maxlength="300" required></textarea>
+    <p id="contador">0 / 300</p>
+
+    <label>Calificación:</label>
+    <div id="estrellas">
+      <span data-valor="1">☆</span>
+      <span data-valor="2">☆</span>
+      <span data-valor="3">☆</span>
+      <span data-valor="4">☆</span>
+      <span data-valor="5">☆</span>
+    </div>
+    <input type="hidden" id="puntuacion" name="puntuacion" required />
+
+    <br />
+    <button class="btn" type="submit">Enviar</button>
+    <button class="btn" type="button" onclick="resetForm()">Limpiar</button>
+  </form>
+
+  <script>
+    
+    const saludo = document.getElementById('saludo-js');
+    const hora = new Date().getHours();
+    if (hora < 12) saludo.textContent = '¡Buenos días!';
+    else if (hora < 18) saludo.textContent = '¡Buenas tardes!';
+    else saludo.textContent = '¡Buenas noches!';
+
+    
+    const frases = [
+      'Comenzá el día con una sonrisa y un buen café ☕',
+      'El desayuno no es una comida, ¡es un momento!',
+      'Hoy es un buen día para un brunch delicioso 🥐',
+      'Despertá tus sentidos con sabor 🍓',
+    ];
+    document.getElementById('frase-dia').textContent = frases[Math.floor(Math.random() * frases.length)];
+
+    
+    const estrellas = document.querySelectorAll('#estrellas span');
+    const puntuacionInput = document.getElementById('puntuacion');
+    let seleccionActual = 0;
+
+    estrellas.forEach((estrella) => {
+      estrella.addEventListener('click', () => {
+        const valor = parseInt(estrella.getAttribute('data-valor'));
+        seleccionActual = valor;
+        puntuacionInput.value = valor;
+        actualizarEstrellas(valor);
+      });
+
+      estrella.addEventListener('mouseover', () => {
+        const valor = parseInt(estrella.getAttribute('data-valor'));
+        actualizarEstrellas(valor);
+      });
+
+      estrella.addEventListener('mouseout', () => {
+        actualizarEstrellas(seleccionActual);
+      });
+    });
+
+    function actualizarEstrellas(rating) {
+      estrellas.forEach((estrella) => {
+        const valor = parseInt(estrella.getAttribute('data-valor'));
+        if (valor <= rating) {
+          estrella.textContent = '⭐';
+          estrella.classList.add('seleccionada');
+        } else {
+          estrella.textContent = '☆';
+          estrella.classList.remove('seleccionada');
+        }
+      });
+    }
+
+    
+    const opinion = document.getElementById('opinion');
+    const contador = document.getElementById('contador');
+
+    opinion.addEventListener('input', () => {
+      contador.textContent = `${opinion.value.length} / 300`;
+    });
+
+    // Validación en tiempo real del nombre
+    document.getElementById('nombre').addEventListener('input', function () {
+      const mensaje = document.getElementById('msgNombre');
+      mensaje.textContent = this.value.trim() === '' ? '⚠️ El nombre es obligatorio.' : '';
+    });
+
+    
+    document.getElementById('formulario').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      
+      if (!puntuacionInput.value) {
+        alert('Por favor, seleccioná una calificación con estrellas.');
+        return;
+      }
+
+      alert('¡Gracias por tu opinión! 🌟');
+
+      resetForm();
+    });
+
+    function resetForm() {
+      document.getElementById('formulario').reset();
+      contador.textContent = '0 / 300';
+      puntuacionInput.value = '';
+      seleccionActual = 0;
+      actualizarEstrellas(0);
+      document.getElementById('msgNombre').textContent = '';
+    }
+  </script>
 </body>
 </html>
