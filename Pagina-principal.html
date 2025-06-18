@@ -1,58 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Página principal</title>
-    <link rel="stylesheet" href="pag-principal-css.css">
+  <meta charset="UTF-8">
+  <title>JoyBox - Inicio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-    <div class="header-text">
-        <h1>JoyBox</h1>
-        <h2>¡Una caja llena de sorpresas!</h2>
-    </div>
+  <div id="saludo"></div>
+
+  <header>
     <img src="fotologo.jpeg" alt="Logo Sabores de Acá" class="logo">
-</header>
+    <nav>
+      <a href="#quienes">Quiénes somos</a>
+      <a href="#promo">Cupón especial</a>
+    </nav>
+    <div class="header-text">
+      <h1>JoyBox</h1>
+      <h2>¡Una caja llena de sorpresas!</h2>
+    </div>
+  </header>
 
-<main>
-    <h3>¿Quiénes somos?</h3>
-    <p>JoyBox es una forma original de regalar una experiencia inolvidable a tu ser querido o amigo.</p>
-
-    <h3>¿Cómo se usa?</h3>
-    <ol>
-        <li>Elegí qué combo te gustaría (desayuno, merienda, etc.).</li>
-        <li>Hacé clic en la categoría y explorá los restaurantes adheridos.</li>
-        <li>Revisá qué combo querés probar.</li>
-        <li>Reservá el día y horario.</li>
-        <li>¡Y a disfrutar!</li>
-    </ol>
-
+  <main>
     <h3>Elegí una opción:</h3>
     <div class="options">
-        <a href="Desayuno/desayuno.html" class="option-btn">Desayuno</a>
-        <a href="Almuerzo/almuerzo.html" class="option-btn">Almuerzo</a>
-        <a href="Merienda/merienda.html" class="option-btn">Merienda</a>
-        <a href="Cena/cena.html" class="option-btn">Cena</a>
+      <div class="option-card">
+        <h4>☀️ Desayuno</h4>
+        <p>Empezá el día con una sorpresa deliciosa: cafés, medialunas y más.</p>
+        <a href="Desayuno/desayuno.html">Ver opciones</a>
+      </div>
+      <div class="option-card">
+        <h4>🍝 Almuerzo</h4>
+        <p>Regalá un almuerzo en los mejores spots de comida argentina.</p>
+        <a href="Almuerzo/almuerzo.html">Ver opciones</a>
+      </div>
+      <div class="option-card">
+        <h4>🍰 Merienda</h4>
+        <p>Una pausa dulce con tortas, infusiones y mucha onda.</p>
+        <a href="Merienda/merienda.html">Ver opciones</a>
+      </div>
+      <div class="option-card">
+        <h4>🌙 Cena</h4>
+        <p>Un cierre perfecto: parrilla, pastas o cocina gourmet.</p>
+        <a href="Cena/cena.html">Ver opciones</a>
+      </div>
     </div>
 
+    <h3 id="quienes">¿Quiénes somos?</h3>
+    <div class="highlight-box">
+      <p>JoyBox es una experiencia gastronómica para compartir, sorprender y disfrutar. Ofrecemos una selección de lugares únicos donde podés regalar momentos deliciosos y memorables.</p>
+    </div>
+
+    <section id="promo" class="promo-box">
+      <h4>🔥 Promo exclusiva Joybox</h4>
+      <p>Mostrá este cupón en <strong>Cafecito de Palermo "Vive Café"</strong> y ¡te regalan una bebida con tu pedido!</p>
+      <button id="btn-cupon">🔥 Usar cupón BEBIDAJOY2025</button>
+      <p id="codigo-cupon" class="codigo-cupon">Código: <span>BEBIDAJOY2025</span></p>
+      <p id="mensaje-cupon" class="mensaje-cupon"></p>
+    </section>
+
+    <section class="registro-box">
+      <h3>🧡 Unite a la comunidad JoyBox</h3>
+      <p>Recibí noticias, promociones y sorpresas exclusivas por email.</p>
+      <form id="form-comunidad">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required placeholder="Tu nombre">
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" required placeholder="ejemplo@email.com">
+        <input type="submit" value="Unirme">
+      </form>
+      <p id="mensaje-registro" class="mensaje-registro"></p>
+    </section>
+
     <form>
-        <h3>¿Ya sabés qué regalar?</h3>
-        <p>Dejanos tu mail y comentario para darte todos los detalles de compra.</p>
-
-        <label for="email">Email:</label>
-        <input type="text" id="email" placeholder="ejemplo@email.com">
-
-        <label for="comentario">Comentario:</label>
-        <textarea id="comentario" rows="6" placeholder="Dejanos tu comentario..."></textarea>
-
-        <input type="submit" value="Enviar">
+      <h3>¿Ya sabés qué regalar?</h3>
+      <p>Dejanos tu mail y comentario para darte todos los detalles de compra.</p>
+      <label for="email">Email:</label>
+      <input type="text" id="email" placeholder="ejemplo@email.com">
+      <label for="comentario">Comentario:</label>
+      <textarea id="comentario" rows="6" placeholder="Dejanos tu comentario..."></textarea>
+      <input type="submit" value="Enviar">
     </form>
-</main>
+  </main>
 
-<footer>
+  <footer>
     © 2025 JoyBox - Sabores de Acá
-</footer>
+  </footer>
+
+  <script>
+    const saludoEl = document.getElementById('saludo');
+    const hora = new Date().getHours();
+    saludoEl.textContent = hora >= 5 && hora < 12 ? "¡Buenos días!" :
+                           hora >= 12 && hora < 18 ? "¡Buenas tardes!" : "¡Buenas noches!";
+
+    const btnCupon = document.getElementById('btn-cupon');
+    const codigoCupon = document.getElementById('codigo-cupon');
+    const mensajeCupon = document.getElementById('mensaje-cupon');
+    codigoCupon.style.display = 'none';
+    mensajeCupon.style.display = 'none';
+
+    btnCupon.addEventListener('click', () => {
+      codigoCupon.style.display = 'block';
+      if (!btnCupon.disabled) {
+        mensajeCupon.textContent = '¡Cupón aplicado! Presentá este código en el local para aprovechar la promo.';
+        mensajeCupon.style.display = 'block';
+        btnCupon.disabled = true;
+        btnCupon.textContent = 'Cupón usado';
+      }
+    });
+
+    const formComunidad = document.getElementById('form-comunidad');
+    const mensajeRegistro = document.getElementById('mensaje-registro');
+
+    formComunidad.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const correo = document.getElementById('correo').value.trim();
+      if (nombre && correo) {
+        const usuario = { nombre, correo, fecha: new Date().toLocaleString() };
+        let registrados = JSON.parse(localStorage.getItem('joybox_comunidad')) || [];
+        registrados.push(usuario);
+        localStorage.setItem('joybox_comunidad', JSON.stringify(registrados));
+        mensajeRegistro.textContent = `🎉 ¡Gracias ${nombre}! Te uniste a la comunidad JoyBox.`;
+        formComunidad.reset();
+        setTimeout(() => {
+          alert("🔔 ¡Estás registrado! Recibirás noticias de JoyBox en tu correo.");
+        }, 500);
+      } else {
+        mensajeRegistro.textContent = "Por favor completá ambos campos.";
+      }
+    });
+  </script>
 
 </body>
 </html>
