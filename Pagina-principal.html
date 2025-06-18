@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>JoyBox - Inicio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="pag-principal-css.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+  <!-- Saludo dinámico -->
   <div id="saludo"></div>
 
   <header>
-    <img src="fotologo.jpeg" alt="Logo Sabores de Acá" class="logo">
+    <img src="fotologo.jpeg" alt="Logo JoyBox" class="logo" />
     <nav>
       <a href="#quienes">Quiénes somos</a>
       <a href="#promo">Cupón especial</a>
@@ -65,22 +66,23 @@
       <p>Recibí noticias, promociones y sorpresas exclusivas por email.</p>
       <form id="form-comunidad">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" required placeholder="Tu nombre">
+        <input type="text" id="nombre" required placeholder="Tu nombre" />
         <label for="correo">Correo electrónico:</label>
-        <input type="email" id="correo" required placeholder="ejemplo@email.com">
-        <input type="submit" value="Unirme">
+        <input type="email" id="correo" required placeholder="ejemplo@email.com" />
+        <input type="submit" value="Unirme" />
       </form>
       <p id="mensaje-registro" class="mensaje-registro"></p>
     </section>
 
-    <form>
+    <form id="form-final">
       <h3>¿Ya sabés qué regalar?</h3>
       <p>Dejanos tu mail y comentario para darte todos los detalles de compra.</p>
       <label for="email">Email:</label>
-      <input type="text" id="email" placeholder="ejemplo@email.com">
+      <input type="text" id="email" placeholder="ejemplo@email.com" />
       <label for="comentario">Comentario:</label>
       <textarea id="comentario" rows="6" placeholder="Dejanos tu comentario..."></textarea>
-      <input type="submit" value="Enviar">
+      <input type="submit" value="Enviar" />
+      <p id="mensaje-final" class="mensaje-final"></p>
     </form>
   </main>
 
@@ -89,11 +91,18 @@
   </footer>
 
   <script>
+    // Saludo dinámico
     const saludoEl = document.getElementById('saludo');
     const hora = new Date().getHours();
-    saludoEl.textContent = hora >= 5 && hora < 12 ? "¡Buenos días!" :
-                           hora >= 12 && hora < 18 ? "¡Buenas tardes!" : "¡Buenas noches!";
+    if (hora >= 5 && hora < 12) {
+      saludoEl.textContent = "¡Buenos días!";
+    } else if (hora >= 12 && hora < 18) {
+      saludoEl.textContent = "¡Buenas tardes!";
+    } else {
+      saludoEl.textContent = "¡Buenas noches!";
+    }
 
+    // Cupón promo
     const btnCupon = document.getElementById('btn-cupon');
     const codigoCupon = document.getElementById('codigo-cupon');
     const mensajeCupon = document.getElementById('mensaje-cupon');
@@ -110,6 +119,7 @@
       }
     });
 
+    // Formulario comunidad JoyBox
     const formComunidad = document.getElementById('form-comunidad');
     const mensajeRegistro = document.getElementById('mensaje-registro');
 
@@ -117,6 +127,7 @@
       e.preventDefault();
       const nombre = document.getElementById('nombre').value.trim();
       const correo = document.getElementById('correo').value.trim();
+
       if (nombre && correo) {
         const usuario = { nombre, correo, fecha: new Date().toLocaleString() };
         let registrados = JSON.parse(localStorage.getItem('joybox_comunidad')) || [];
@@ -129,6 +140,26 @@
         }, 500);
       } else {
         mensajeRegistro.textContent = "Por favor completá ambos campos.";
+      }
+    });
+
+    // Formulario final con mensaje interactivo
+    const formFinal = document.getElementById('form-final');
+    const mensajeFinal = document.getElementById('mensaje-final');
+
+    formFinal.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const comentario = document.getElementById('comentario').value.trim();
+
+      if (email && comentario) {
+        mensajeFinal.textContent = "💌 ¡Gracias por tu mensaje! En JoyBox creemos que cada detalle es una sorpresa. Pronto tendrás noticias nuestras.";
+        formFinal.reset();
+        setTimeout(() => {
+          alert("🎉 ¡Gracias por confiar en JoyBox! Tu próxima sorpresa está en camino 💝");
+        }, 800);
+      } else {
+        mensajeFinal.textContent = "Por favor completá ambos campos.";
       }
     });
   </script>
