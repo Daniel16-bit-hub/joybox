@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -28,14 +28,19 @@ header {
   background: linear-gradient(135deg, #ff6a00, #ee0979);
   color: white;
   padding: 30px 20px;
-  text-align: center;
   border-radius: 0 0 30px 30px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
   max-width: 120px;
-  margin-bottom: 10px;
+  border-radius: 8px;
+  object-fit: contain;
 }
 
 nav {
@@ -50,8 +55,18 @@ nav a {
   font-size: 1rem;
 }
 
-.header-text h1 {
+nav a:hover {
+  text-decoration: underline;
+}
+
+.header-text {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
   font-family: 'Playfair Display', serif;
+}
+
+.header-text h1 {
   font-size: 3.2rem;
   margin: 10px 0 5px;
 }
@@ -140,7 +155,8 @@ input[type="submit"]:hover {
 
 .codigo-cupon,
 .mensaje-cupon,
-.mensaje-registro {
+.mensaje-registro,
+.mensaje-final {
   margin-top: 10px;
   font-weight: bold;
   color: #cb5e4e;
