@@ -7,7 +7,8 @@ La actividad principal es del sector terciario, ya que ofrecemos servicios de co
 c) Cuáles son los objetivos del sitio web que se desarrolló
 Los objetivos son los de satisfacer una necesidad. La necesidad de poder regalar algo simple y rápido, que sirva tanto para el que regala como para el que lo recibe.
 d) Justificación de la elección de la tipografía y paleta de colores
-Usamos una paleta de colores más fuertes que la versión anterior. Le dimos más fuerza a la página, dando tonos fuertes naranja para acompañar la idea de modernidad y de algo nuevo y brillante.
+Usamos una paleta de colores más fuertes que la versión anterior. Le dimos más fuerza a la página, dando tonos naranja para acompañar la idea de modernidad y de algo nuevo y brillante. Jugamos con la saturación y brillo en toda la página, haciendo que sea llamativo pero sin saturar la vista, por eso en la sección de unirse a la comunidad y resto tienen mucha menos saturación.
+En relación con la tipografía solo usamos dos tipos de letra, Poppins (menos formal) y Playfair Display (más formal). Usamos más que nada Poppins sin serifa porque da una sensación de modernidad y clara. Después para el tipo de letra usamos un peso, ancho e inclinación regular.
 e) Público objetivo: edad, sexo, aficiones, inquietudes, nacionalidad, poder
 adquisitivo, etc
 Edad: 20 a 55 años
