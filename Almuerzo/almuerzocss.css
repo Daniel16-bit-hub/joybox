@@ -1,180 +1,146 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #fffaf6;
-  color: #333;
-  padding: 40px;
-  max-width: 800px;
-  margin: auto;
+  color: #444;
+  margin: 0;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 h1 {
-  color: #a0522d;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 3em;
+  color: #cb5e4e;
+  margin-bottom: 10px;
 }
 
-img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 20px;
-  margin: 20px 0;
+#saludo-js,
+#frase-dia {
+  text-align: center;
+  font-style: italic;
+  margin: 5px;
+  color: #7f726c;
 }
 
-.content {
-  font-size: 1.1em;
-  line-height: 1.6;
+.info-box {
+  background-color: #fff0e6;
+  border-left: 6px solid #f5a892;
+  border-radius: 15px;
+  padding: 20px 30px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-ul {
+.info-box ul {
+  list-style-type: '🍩';
   padding-left: 20px;
 }
 
-.btn, .btn-sec {
-  display: inline-block;
-  background: linear-gradient(145deg, #a0522d, #c36d3d);
-  color: white;
-  text-decoration: none;
-  padding: 12px 28px;
-  border-radius: 40px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  border: none;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-.btn:hover, .btn-sec:hover {
-  transform: scale(1.05);
-  background: linear-gradient(145deg, #8a3f1f, #b35c2a);
-}
-
-.botones-centrados {
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: transform 0.3s ease;
   display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  flex-direction: column;
 }
 
-.horarios {
-  background-color: #f2e6d9;
-  padding: 15px 20px;
-  border-radius: 15px;
-  margin-top: 30px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.horarios h3 {
-  margin-top: 0;
-  color: #a0522d;
-}
-
-iframe {
+.card img {
   width: 100%;
-  height: 300px;
-  border: 0;
-  margin-top: 15px;
-  border-radius: 15px;
+  height: 180px;
+  object-fit: cover;
 }
 
-.ubicacion {
-  margin-top: 30px;
+.card-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.ubicacion h3 {
-  color: #a0522d;
-  margin-bottom: 8px;
+.card h2 {
+  font-size: 1.5em;
+  margin: 0 0 10px;
+  color: #cb5e4e;
 }
 
-.ubicacion p {
-  font-size: 1rem;
-  margin: 5px 0 10px;
+.card p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 15px;
 }
 
-.btn-map {
-  display: inline-block;
-  margin-top: 10px;
-  background: linear-gradient(145deg, #a0522d, #c36d3d);
+.btn {
+  background-color: #f5a892;
   color: white;
-  padding: 10px 24px;
-  border-radius: 40px;
-  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
   text-decoration: none;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  transition: background 0.3s ease;
+  display: inline-block;
+  text-align: center;
 }
 
-.btn-map:hover {
-  background: linear-gradient(145deg, #8a3f1f, #b35c2a);
+.btn:hover {
+  background-color: #e07c66;
 }
 
-.opiniones, .formulario, .reserva {
-  background-color: #fef9f4;
+form {
+  margin-top: 50px;
+  background-color: #fff0e6;
   padding: 20px;
   border-radius: 15px;
-  margin-top: 40px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  display: none;
 }
 
-.opiniones h3, .formulario h3, .reserva h3 {
-  color: #a0522d;
-}
-
-.opinion {
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-}
-
-.stars {
-  color: gold;
-}
-
-label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-input[type="text"], input[type="date"], input[type="time"], textarea, select {
+form input,
+form textarea {
   width: 100%;
   padding: 10px;
+  margin: 10px 0;
   border-radius: 10px;
   border: 1px solid #ccc;
-  margin-top: 5px;
-  font-size: 1em;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
 }
 
-textarea {
-  resize: vertical;
-}
-
-input[type="submit"] {
-  background-color: #a0522d;
-  color: white;
-  border: none;
-  padding: 14px 32px;
-  margin-top: 15px;
-  border-radius: 30px;
+#estrellas span {
+  font-size: 24px;
   cursor: pointer;
-  font-size: 1em;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  user-select: none;
+  transition: color 0.3s ease;
+  color: #ccc;
 }
 
-input[type="submit"]:hover {
-  background-color: #81411f;
+#estrellas span.seleccionada,
+#estrellas span:hover,
+#estrellas span:hover ~ span {
+  color: #cb5e4e;
 }
 
-.mensaje-exito {
-  background-color: #dff0d8;
-  color: #3c763d;
-  padding: 10px 15px;
-  border-radius: 10px;
-  margin-top: 15px;
-  font-weight: bold;
-  display: none;
+#contador {
+  font-size: 0.9rem;
+  color: #7f726c;
+  text-align: right;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-style: italic;
 }
