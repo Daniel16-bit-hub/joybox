@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>El Cuartito - Joybox</title>
+  <link rel="stylesheet" href="el-cuartito.css"/>
+</head>
+<body>
+
+  <h1>El Cuartito</h1>
+  <img src="https://media-cdn.tripadvisor.com/media/photo-s/1a/43/c9/38/salon.jpg" width="300" height="200">
+
+  <div class="content">
+    <p>Pizzería clásica de Buenos Aires desde 1934, con sabor y nostalgia en cada porción 🍕</p>
+
+    <h2>🍕 ¿Qué incluye el almuerzo Joybox?</h2>
+    <ul>
+      <li>2 porciones a elección (muzarella, fugazzeta, napolitana, roquefort, jamón y morrones)</li>
+      <li>1 empanada</li>
+      <li>1 bebida sin alcohol (gaseosa, agua o limonada casera)</li>
+    </ul>
+
+    <div class="horarios">
+      <h3>🕗 Horarios</h3>
+      <p><strong>Lunes a Sábado:</strong> 11:30 - 15:30 hs<br/>
+         <strong>Domingo:</strong> Cerrado</p>
+    </div>
+
+    <!-- Ubicación -->
+    <div class="ubicacion">
+      <h3><span aria-label="ubicación" role="img">📍</span> Ubicación destacada</h3>
+      <p>Ubicada en el microcentro porteño, El Cuartito conserva su estilo original y una clientela fiel desde hace casi 90 años.</p>
+      <p><strong>Dirección:</strong> Talcahuano 937, CABA</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.9022720337655!2d-58.38719472439254!3d-34.63216017295064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac7e889db9b%3A0x1fc03cd8fbeef6b4!2sEl%20Cuartito!5e0!3m2!1ses-419!2sar!4v1718484912026!5m2!1ses-419!2sar" width="300" height="200" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a href="https://goo.gl/maps/CcEk5eqfa6F8oTxK7" target="_blank" rel="noopener" class="btn-map">
+        Ver en Google Maps
+      </a>
+    </div>
+
+    <!-- Botones Ver Opiniones y Reservar -->
+    <div class="botones-centrados">
+      <button class="btn-sec" onclick="mostrarOpiniones()">⭐ Ver opiniones</button>
+      <button class="btn-sec" onclick="mostrarReserva()">📅 Reservar mesa</button>
+    </div>
+
+    <!-- Opiniones -->
+    <div class="opiniones" id="opiniones">
+      <h3>⭐ Opiniones de clientes</h3>
+      <div class="opinion">
+        <p><strong>Agustina:</strong> <span class="stars">★★★★★</span><br>La fugazzeta es una locura. Lugar con alma porteña.</p>
+      </div>
+      <div class="opinion">
+        <p><strong>Julián:</strong> <span class="stars">★★★★☆</span><br>Ambiente nostálgico, precios razonables. Siempre está lleno.</p>
+      </div>
+      <div class="opinion">
+        <p><strong>Laura:</strong> <span class="stars">★★★★★</span><br>La mejor pizza al molde de la ciudad.</p>
+      </div>
+      <div class="opinion">
+        <p><strong>Marcelo:</strong> <span class="stars">★★★★☆</span><br>Ideal para una buena porción rápida al mediodía.</p>
+      </div>
+    </div>
+
+    <!-- Formulario Opinión -->
+    <div class="formulario" id="formulario">
+      <h3>📝 Dejá tu opinión</h3>
+      <form id="formOpiniones">
+        <label for="nombre">Tu nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="estrellas">Puntaje:</label>
+        <select id="estrellas" name="estrellas" required>
+          <option value="">Seleccionar</option>
+          <option value="5">★★★★★</option>
+          <option value="4">★★★★☆</option>
+          <option value="3">★★★☆☆</option>
+          <option value="2">★★☆☆☆</option>
+          <option value="1">★☆☆☆☆</option>
+        </select>
+
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+        <input type="submit" value="Enviar opinión">
+        <div class="mensaje-exito" id="exito-opinion">¡Gracias por tu opinión!</div>
+      </form>
+    </div>
+
+    <!-- Formulario Reserva -->
+    <div class="reserva" id="reserva">
+      <h3>📅 Reservá tu mesa</h3>
+      <form id="formReserva">
+        <label for="nombre-reserva">Nombre:</label>
+        <input type="text" id="nombre-reserva" name="nombre-reserva" required>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required>
+
+        <label for="mensaje">Mensaje opcional:</label>
+        <textarea id="mensaje" name="mensaje" rows="3" placeholder="¿Algo que quieras contarnos?"></textarea>
+
+        <input type="submit" value="Reservar">
+        <div class="mensaje-exito" id="exito-reserva">¡Reserva realizada con éxito!</div>
+      </form>
+    </div>
+
+    <a href="almuerzos.html" class="btn">⬅ Volver a los almuerzos</a>
+  </div>
+
+  <script>
+    function mostrarOpiniones() {
+      document.getElementById("opiniones").style.display = "block";
+      document.getElementById("formulario").style.display = "block";
+      document.getElementById("reserva").style.display = "none";
+    }
+
+    function mostrarReserva() {
+      document.getElementById("reserva").style.display = "block";
+      document.getElementById("opiniones").style.display = "none";
+      document.getElementById("formulario").style.display = "none";
+    }
+
+    document.getElementById("formOpiniones").addEventListener("submit", function(e) {
+      e.preventDefault();
+      this.reset();
+      document.getElementById("exito-opinion").style.display = "block";
+      setTimeout(() => document.getElementById("exito-opinion").style.display = "none", 3000);
+    });
+
+    document.getElementById("formReserva").addEventListener("submit", function(e) {
+      e.preventDefault();
+      this.reset();
+      document.getElementById("exito-reserva").style.display = "block";
+      setTimeout(() => document.getElementById("exito-reserva").style.display = "none", 3000);
+    });
+  </script>
+
+</body>
+</html>
