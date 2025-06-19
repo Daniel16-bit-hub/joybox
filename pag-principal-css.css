@@ -210,14 +210,14 @@ footer {
 }
 .slider-container {
   overflow: hidden;
-  width: 100%;
-  max-width: 100%;
+  width: 100;
+  max-width: 100;
   position: relative;
 }
 
 .slider {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.10s ease-in-out;
   width: max-content;
 }
 
