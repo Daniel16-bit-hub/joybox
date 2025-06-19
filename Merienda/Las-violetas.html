@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Las Violetas - Joybox</title>
+  <link rel="stylesheet" href="LasVioletas.css" />
+</head>
+<body>
+
+  <h1>Las Violetas</h1>
+  <img src="https://lh3.googleusercontent.com/gps-cs-s/AB5caB8HX6uubzwBoBd7O6J-ZqzV0OPWmzW0eitRrmSTr95uZ-7_ieUDh9rg9vugFd_H3cE9tWtXAMYcLKOD13CA-bRBrKJGzT1z2QmRGKHgU4_iKeTnF5GmrI7WLDiXepdtOWQjcU9b9Q=s680-w680-h510" width="300" height="200">
+
+  <div class="content">
+    <p>Disfrutá de un desayuno exquisito en Las Violetas, con té de especialidad y en un lugar histórico Argentino.</p>
+
+    <h2>🧺 ¿Qué incluye la merienda Joybox?</h2>
+    <ul>
+        <li>Selección de té en hebras</li>
+        <li>Porción de torta Rogel</li>
+        <li>Porción de Selva Negra</li>
+        <li>2 medialunas de manteca</li>
+        <li>Pan de campo con queso y dulce</li>
+        <li>Jugo de naranja exprimido</li>
+    </ul>
+
+    <div class="horarios">
+      <h3>🕗 Horarios</h3>
+      <p><strong>Lunes a Viernes:</strong> 7:30 - 12:30 hs<br />
+         <strong>Sábados y Domingos:</strong> 8:00 - 13:00 hs</p>
+    </div>
+
+    <!-- Ubicación -->
+    <div class="ubicacion">
+      <h3><span aria-label="ubicación" role="img">📍</span> Ubicación destacada</h3>
+      <p>
+        Café Martínez se encuentra en Av. de Mayo 1102, en el corazón de la Ciudad Autónoma de Buenos Aires.
+        Un lugar ideal para comenzar el día con un desayuno inolvidable en un entorno histórico y vibrante.
+      </p>
+      <p><strong>Dirección:</strong> Av. de Mayo 1102, C1085ABO, CABA</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.7184267120456!2d-58.42347542439284!3d-34.61128097295167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca5ef7a13e55%3A0xc2d1eee01d4cb124!2sLas%20Violetas!5e0!3m2!1ses-419!2sar!4v1745429858703!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a href="https://www.google.com/maps/place/Av.+de+Mayo+1102,+C1085ABO+CABA,+Argentina/@-34.613739,-58.373979,17z"
+         target="_blank" rel="noopener" class="btn-map">
+        Ver en Google Maps
+      </a>
+    </div>
+
+    <!-- Botones Ver Opiniones y Reservar -->
+    <div class="botones-centrados">
+      <button class="btn-sec" onclick="mostrarOpiniones()">⭐ Ver opiniones</button>
+      <button class="btn-sec" onclick="mostrarReserva()">📅 Reservar mesa</button>
+    </div>
+
+    <!-- Opiniones -->
+    <div class="opiniones" id="opiniones">
+      <h3>⭐ Opiniones de clientes</h3>
+      <div class="opinion">
+        <p><strong>Lucía:</strong> <span class="stars">★★★★★</span><br>¡Excelente atención y las medialunas riquísimas!</p>
+      </div>
+      <div class="opinion">
+        <p><strong>Julián:</strong> <span class="stars">★★★★☆</span><br>Muy lindo lugar, el café llegó un poco frío.</p>
+      </div>
+      <div class="opinion">
+        <p><strong>Carla:</strong> <span class="stars">★★★★★</span><br>Ambiente tranquilo y buena música.</p>
+      </div>
+      <div class="opinion">
+        <p><strong>Fernando:</strong> <span class="stars">★★★☆☆</span><br>Esperaba más del jugo natural, pero estuvo bien.</p>
+      </div>
+    </div>
+
+    <!-- Formulario Opinión -->
+    <div class="formulario" id="formulario">
+      <h3>📝 Dejá tu opinión</h3>
+      <form id="formOpiniones">
+        <label for="nombre">Tu nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="estrellas">Puntaje:</label>
+        <select id="estrellas" name="estrellas" required>
+          <option value="">Seleccionar</option>
+          <option value="5">★★★★★</option>
+          <option value="4">★★★★☆</option>
+          <option value="3">★★★☆☆</option>
+          <option value="2">★★☆☆☆</option>
+          <option value="1">★☆☆☆☆</option>
+        </select>
+
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+        <input type="submit" value="Enviar opinión">
+        <div class="mensaje-exito" id="exito-opinion">¡Gracias por tu opinión!</div>
+      </form>
+    </div>
+
+    <!-- Formulario Reserva -->
+    <div class="reserva" id="reserva">
+      <h3>📅 Reservá tu mesa</h3>
+      <form id="formReserva">
+        <label for="nombre-reserva">Nombre:</label>
+        <input type="text" id="nombre-reserva" name="nombre-reserva" required>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required>
+
+        <label for="mensaje">Mensaje opcional:</label>
+        <textarea id="mensaje" name="mensaje" rows="3" placeholder="¿Algo que quieras contarnos?"></textarea>
+
+        <input type="submit" value="Reservar">
+        <div class="mensaje-exito" id="exito-reserva">¡Reserva realizada con éxito!</div>
+      </form>
+    </div>
+
+    <a href="merienda.html" class="btn">⬅ Volver a las meriendas</a>
+  </div>
+
+  <script>
+    function mostrarOpiniones() {
+      document.getElementById("opiniones").style.display = "block";
+      document.getElementById("formulario").style.display = "block";
+      document.getElementById("reserva").style.display = "none";
+    }
+
+    function mostrarReserva() {
+      document.getElementById("reserva").style.display = "block";
+      document.getElementById("opiniones").style.display = "none";
+      document.getElementById("formulario").style.display = "none";
+    }
+
+    // Limpiar formularios y mostrar mensaje de éxito
+    document.getElementById("formOpiniones").addEventListener("submit", function(e) {
+      e.preventDefault();
+      this.reset();
+      document.getElementById("exito-opinion").style.display = "block";
+      setTimeout(() => document.getElementById("exito-opinion").style.display = "none", 3000);
+    });
+
+    document.getElementById("formReserva").addEventListener("submit", function(e) {
+      e.preventDefault();
+      this.reset();
+      document.getElementById("exito-reserva").style.display = "block";
+      setTimeout(() => document.getElementById("exito-reserva").style.display = "none", 3000);
+    });
+  </script>
+
+</body>
+</html>
