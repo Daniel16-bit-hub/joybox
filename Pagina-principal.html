@@ -25,26 +25,28 @@
 
   <main>
     <h3>Elegí una opción:</h3>
-    <div class="options">
-      <div class="option-card">
-        <h4>☀️ Desayuno</h4>
-        <p>Empezá el día con una sorpresa deliciosa: cafés, medialunas y más.</p>
-        <a href="Desayuno/desayuno.html">Ver opciones</a>
-      </div>
-      <div class="option-card">
-        <h4>🍝 Almuerzo</h4>
-        <p>Regalá un almuerzo en los mejores spots de comida argentina.</p>
-        <a href="Almuerzo/almuerzo.html">Ver opciones</a>
-      </div>
-      <div class="option-card">
-        <h4>🍰 Merienda</h4>
-        <p>Una pausa dulce con tortas, infusiones y mucha onda.</p>
-        <a href="Merienda/merienda.html">Ver opciones</a>
-      </div>
-      <div class="option-card">
-        <h4>🌙 Cena</h4>
-        <p>Un cierre perfecto: parrilla, pastas o cocina gourmet.</p>
-        <a href="Cena/cena.html">Ver opciones</a>
+    <div class="slider-container">
+      <div class="slider" id="slider">
+        <div class="option-card"> <!-- Desayuno -->
+          <h4>☀️ Desayuno</h4>
+          <p>Empezá el día con una sorpresa deliciosa: cafés, medialunas y más.</p>
+          <a href="Desayuno/desayuno.html">Ver opciones</a>
+        </div>
+        <div class="option-card"> <!-- Almuerzo -->
+          <h4>🍝 Almuerzo</h4>
+          <p>Regalá un almuerzo en los mejores spots de comida argentina.</p>
+          <a href="Almuerzo/almuerzo.html">Ver opciones</a>
+        </div>
+        <div class="option-card"> <!-- Merienda -->
+          <h4>🍰 Merienda</h4>
+          <p>Una pausa dulce con tortas, infusiones y mucha onda.</p>
+          <a href="Merienda/merienda.html">Ver opciones</a>
+        </div>
+        <div class="option-card"> <!-- Cena -->
+          <h4>🌙 Cena</h4>
+          <p>Un cierre perfecto: parrilla, pastas o cocina gourmet.</p>
+          <a href="Cena/cena.html">Ver opciones</a>
+        </div>
       </div>
     </div>
 
@@ -101,6 +103,46 @@
     } else {
       saludoEl.textContent = "¡Buenas noches!";
     }
+    
+    //rotacion de carteles (usamos funciones) 
+    const slider = document.getElementById("slider");
+    const cards = slider.querySelectorAll(".option-card");
+    const cardWidth = 320; 
+    let currentIndex = 0;
+    let interval;
+    
+    cards.forEach(card => {
+      const clone = card.cloneNode(true);
+      slider.appendChild(clone);
+    });
+
+    // Función para mover el carrusel
+    function moverCarrusel() {
+      currentIndex++;
+      slider.style.transition = "transform 0.5s ease-in-out";
+      slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+      // Reset visual sin salto
+      if (currentIndex === cards.length) {
+        setTimeout(() => {
+          slider.style.transition = "none";
+          slider.style.transform = "translateX(0)";
+          currentIndex = 0;
+        }, );
+      }
+    }
+
+    // Ejecutar cada 3 segundos
+    function startCarrusel() {
+      interval = setInterval(moverCarrusel, 3000);
+    }
+
+    // Pausar en hover
+    slider.addEventListener("mouseenter", () => clearInterval(interval));
+    slider.addEventListener("mouseleave", startCarrusel);
+
+    // Iniciar carrusel
+    startCarrusel();
 
     // Cupón promo
     const btnCupon = document.getElementById('btn-cupon');
