@@ -1,4 +1,9 @@
 1) Presentación del Proyecto
+Integrantes:
+Bianca Chancalay
+Mayra Gutierrez
+Daniel Palomino
+Uriel Velardez
 
 a) Síntesis de acerca de qué se trata el proyecto
 El proyecto se trata de una página web de "caja" de regalos. Queremos introducirlo a la competencia siendo mas inovadores y con precios competitivos del mercado. Con este tipo de regalo, la persona puede elegir donde comer, con un menú predeterminado.
