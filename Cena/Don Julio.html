@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Don Julio - Joybox</title>
+  <link rel="stylesheet" href="Don Julio.css"/>
+</head>
+<body>
+
+  <h1>Don Julio</h1>
+  <img src="imgcena/36billares.jpg" width="300" height="200">
+
+    <div class="content">
+        <p>Disfrutá de una cena inolvidable</p>
+        <h2>🧺 ¿Qué incluye la cena Joybox?</h2>
+        <ul>
+          <li>tres platos de la carta a eleccion</li>
+          <li>3 bebidas a eleccion </li>  
+        </ul>
+
+        <div class="horarios">
+            <h3>🕗 Horarios</h3>
+            <p><strong>Lunes a Viernes:</strong> 19:30 - 00:00 hs<br/>
+            <strong>Sábados y Domingos:</strong> 19:30 - 1:00 hs</p>
+        </div>
+
+        <!-- Ubicación -->
+        <div class="ubicacion">
+        <h3><span aria-label="ubicación" role="img">📍</span> Ubicación destacada</h3>
+        <p>
+        Don Julio se encuentra en el barrio de Palermo, específicamente en la calle Guatemala 4691, esquina Gurruchaga, en Buenos Aires.         </p>
+        <p><strong>Dirección:</strong>Guatemala 4691</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.705548510094!2d-58.42684382439395!3d-34.58631637296057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb586ea7789a1%3A0x5f51f7dc0f6a6859!2sDon%20Julio!5e0!3m2!1ses-419!2sar!4v1744828019515!5m2!1ses-419!2sar"width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"width="300" height="200" style="border:0;" aling="center" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href=https://www.google.com/maps?sca_esv=07aeded15e020cec&rlz=1C1ONGR_esAR1053AR1053&output=search&q=donde+queda+don+julio+buenos+aires&source=lnms&fbs=AIIjpHzAx70LpVteQ3HFTBH-UbSXuqgSdwAG_w0_Uy7zXKzBhv-aa7bJCVtXPrhp5ylRF_6ST28f2PZFaGJJh3aKMBX1Y8kT-60yiRUq8XU4P_tCWb6W-Hn_KWvE9nYvPfk2YOzcmKf5rP7ac6HZ1laHBNV5tKunSU68Vvsanz-7sbhkPc8DfV4Z3Mx3Avl6PC3foj_1zgrNW9MlRGgf5cMM61Xg3luZKg&entry=mc&ved=1t:200715&ictx=111" target="_blank" rel="noopener" class="btn-map">
+            Ver en Google Maps
+        </a>
+        </div>
+
+        <!-- Botones Ver Opiniones y Reservar -->
+        <div class="botones-centrados">
+        <button class="btn-sec" onclick="mostrarOpiniones()">⭐ Ver opiniones</button>
+        <button class="btn-sec" onclick="mostrarReserva()">📅 Reservar mesa</button>
+        </div>
+
+        <!-- Opiniones -->
+        <div class="opiniones" id="opiniones">
+        <h3>⭐ Opiniones de clientes</h3>
+        <div class="opinion">
+            <p><strong>Lucía:</strong> <span class="stars">★★★★★</span><br>¡Excelente Pastas muy rico todo!</p>
+        </div>
+        <div class="opinion">
+            <p><strong>Julián:</strong> <span class="stars">★★★★☆</span><br>Muy lindo lugar, los meseros unos genios!.</p>
+        </div>
+        <div class="opinion">
+            <p><strong>Carla:</strong> <span class="stars">★★★★★</span><br>Ambiente tranquilo y buena música.</p>
+        </div>
+        <div class="opinion">
+            <p><strong>Fernando:</strong> <span class="stars">★★★☆☆</span><br>muy caro, pero vale la pena</p>
+        </div>
+        </div>
+
+        <!-- Formulario Opinión -->
+        <div class="formulario" id="formulario">
+        <h3>📝 Dejá tu opinión</h3>
+        <form id="formOpiniones">
+            <label for="nombre">Tu nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="estrellas">Puntaje:</label>
+            <select id="estrellas" name="estrellas" required>
+            <option value="">Seleccionar</option>
+            <option value="5">★★★★★</option>
+            <option value="4">★★★★☆</option>
+            <option value="3">★★★☆☆</option>
+            <option value="2">★★☆☆☆</option>
+            <option value="1">★☆☆☆☆</option>
+            </select>
+
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+            <input type="submit" value="Enviar opinión">
+            <div class="mensaje-exito" id="exito-opinion">¡Gracias por tu opinión!</div>
+        </form>
+        </div>
+
+        <!-- Formulario Reserva -->
+        <div class="reserva" id="reserva">
+        <h3>📅 Reservá tu mesa</h3>
+        <form id="formReserva">
+            <label for="nombre-reserva">Nombre:</label>
+            <input type="text" id="nombre-reserva" name="nombre-reserva" required>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <label for="mensaje">Mensaje opcional:</label>
+            <textarea id="mensaje" name="mensaje" rows="3" placeholder="¿Algo que quieras contarnos?"></textarea>
+
+            <input type="submit" value="Reservar">
+            <div class="mensaje-exito" id="exito-reserva">¡Reserva realizada con éxito!</div>
+        </form>
+        </div>
+        <a href="cena.html" class="btn">⬅ Volver a las cenas</a>
+    </div>
+
+  <script>
+    function mostrarOpiniones() {
+      document.getElementById("opiniones").style.display = "block";
+      document.getElementById("formulario").style.display = "block";
+      document.getElementById("reserva").style.display = "none";
+    }
+
+    function mostrarReserva() {
+      document.getElementById("reserva").style.display = "block";
+      document.getElementById("opiniones").style.display = "none";
+      document.getElementById("formulario").style.display = "none";
+    }
+
+    // Limpiar formularios y mostrar mensaje de éxito
+    document.getElementById("formOpiniones").addEventListener("submit", function(e) {
+      e.preventDefault();
+      this.reset();
+      document.getElementById("exito-opinion").style.display = "block";
+      setTimeout(() => document.getElementById("exito-opinion").style.display = "none", 3000);
+    });
+
+    document.getElementById("formReserva").addEventListener("submit", function(e) {
+      e.preventDefault();
+      this.reset();
+      document.getElementById("exito-reserva").style.display = "block";
+      setTimeout(() => document.getElementById("exito-reserva").style.display = "none", 3000);
+    });
+  </script>
+
+</body>
+</html>
