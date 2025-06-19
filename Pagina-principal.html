@@ -16,6 +16,8 @@
     <nav>
       <a href="#quienes">Quiénes somos</a>
       <a href="#promo">Cupón especial</a>
+      <a href="#registro"> Regístrate</a>
+      <a href="#contactanos"> Contáctanos </a>
     </nav>
     <div class="header-text">
       <h1>JoyBox</h1>
@@ -52,7 +54,7 @@
 
     <h3 id="quienes">¿Quiénes somos?</h3>
     <div class="highlight-box">
-      <p>JoyBox es una experiencia gastronómica para compartir, sorprender y disfrutar. Ofrecemos una selección de lugares únicos donde podés regalar momentos deliciosos y memorables.</p>
+      <p>JoyBox nace para transformar cada momento en una experiencia única y deliciosa. Somos un equipo apasionado por la gastronomía que quiere acercarte los mejores sabores y lugares, para que disfrutes y compartas con quienes más querés.</p>
     </div>
 
     <section id="promo" class="promo-box">
@@ -63,7 +65,7 @@
       <p id="mensaje-cupon" class="mensaje-cupon"></p>
     </section>
 
-    <section class="registro-box">
+    <section id="registro" class="registro-box">
       <h3>🧡 Unite a la comunidad JoyBox</h3>
       <p>Recibí noticias, promociones y sorpresas exclusivas por email.</p>
       <form id="form-comunidad">
@@ -76,7 +78,7 @@
       <p id="mensaje-registro" class="mensaje-registro"></p>
     </section>
 
-    <form id="form-final">
+    <form id="contactanos" class="contactanos">
       <h3>¿Ya sabés qué regalar?</h3>
       <p>Dejanos tu mail y comentario para darte todos los detalles de compra.</p>
       <label for="email">Email:</label>
@@ -86,24 +88,20 @@
       <input type="submit" value="Enviar" />
       <p id="mensaje-final" class="mensaje-final"></p>
     </form>
+ <section class="info-contacto">
+      <h4>📍 Contacto JoyBox</h4>
+      <p><strong>Mail:</strong> contacto@joybox.com</p>
+      <p><strong>Teléfono:</strong> +54 9 11 1234 5678</p>
+      <p><strong>Instagram:</strong> <a href="https://www.instagram.com/joybox" target="_blank">@joybox</a></p>
+    </section>
   </main>
+
 
   <footer>
     © 2025 JoyBox - Sabores de Acá
   </footer>
 
-  <script>
-    // Saludo dinámico
-    const saludoEl = document.getElementById('saludo');
-    const hora = new Date().getHours();
-    if (hora >= 5 && hora < 12) {
-      saludoEl.textContent = "¡Buenos días!";
-    } else if (hora >= 12 && hora < 18) {
-      saludoEl.textContent = "¡Buenas tardes!";
-    } else {
-      saludoEl.textContent = "¡Buenas noches!";
-    }
-    
+<script>
     //rotacion de carteles (usamos funciones) 
     const slider = document.getElementById("slider");
     const cards = slider.querySelectorAll(".option-card");
