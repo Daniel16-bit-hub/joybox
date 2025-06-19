@@ -4,145 +4,183 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Almuerzo</title>
+  <title>Joybox almuerzo</title>
   <link rel="stylesheet" href="./almuerzocss.css">
 </head>
 <body>
-  <section>
-    <h1>Almuerzo</h1>
-    <p>Sabor casero, energia justa y ese gustito que te hace sonreir hasta la cena. Elegi el tipo de plato que te gusta y lo disrutaras una banda</p>
-  </section>
-  <table>
-    <tr>
-      <td>
-        Información sobre este Joybox:
-        <br>
-        <ul>
-          <li>El valor es de 110.000</li>
-          <li>El menú incluye un almuerzo para cuatro personas</li>
-          <li>En cada restaurante vas a tener la opción de ver el menú que ofrece. Revisa bien antes de comprar</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-  <h2>Nuestros lugares para almorzar</h2>
-  </tr>
-  <table>
-    <tr>
-      <td>
-        <h2>El antojo</h2>
-        <p>Un restaurante que ofrece las mejores milanesas de Buenos Aires y podes pedir comida que te lo llevan a casa.</p>
-        <img src="img_almuerzo/el_antojo.jpg" width="300" height="200">
-        <iframe src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.1430618844347!2d-58.49796832452485!3d-34.60054375733007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb625347e9331%3A0xabbed8c9bf18051e!2sEl%20Antojo!5e0!3m2!1ses-419!2sar!4v1745547427787!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <br>
-        <label for="menu1">Ver menú</label>
-        <input type="checkbox" id="menu1">
-        <div class="contenido-extra">
-            <p>El menú incluye:</p>
-            <ul>
-                <li>De la casa: Milanesa con jamon, mozzarella, rodajas de tomate, cebolla caramelizada y panceta</li>
-                <li>De entrada especial: Tortilla Española</li>
-                <li>Bastones de mozzarella</li>
-            </ul>
-        </div>
-      </td>
-    </tr>
-  </table>
+  <h1>Joybox Almuerzos</h1>
+  <h2 id="saludo-js"></h2>
+  <p class="subtitle">Un almuerzo único para saborear Buenos Aires 🍽️🇦🇷</p>
+  <p id="frase-dia"></p>
 
-  <table>
-    <tr>
-      <td>
-        <h2>Guerrin</h2>
-        <p>Un restaurante antiguo que ofrece unas riquisimas pizzas de la Avenida Corrientes.</p>
-        <img src="img_almuerzo/guerrin.jpg" width="300" height="200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0016059338673!2d-58.385982!3d-34.6041209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac42dabce9b%3A0xbaa2d156dbe4138d!2zUGl6emVyw61hIEfDvGVycsOtbg!5e0!3m2!1ses!2sar!4v1745547252956!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <br>
-        <label for="menu1">Ver menú</label>
-        <input type="checkbox" id="menu1">
-        <div class="contenido-extra">
-          <p>El menú incluye:</p>
-          <ul>
-              <li>Especial Guerrin: Mozzarella, jamon, morrones y aceitunas</li>
-              <li>Fugazza con mozzarella</li>
-              <li>Suprema Guerrin: Mozzarella, champignones, palmitosmy alcauciles</li>
-              <li>Bebidas: Gaseosas linea Coca-Cola, licuados, jugo exprimido y Agua mineral y saborizada</li>
-          </ul>
-        </div>
-      </td>
-    </tr>
-  </table>
-  
-  <table>
-    <tr>
-    <td>
+  <div class="info-box">
+    <strong>Información general del Joybox:</strong>
+    <ul>
+      <li>Valor: $45.000.</li>
+      <li>Incluye almuerzo para 2 personas.</li>
+      <li>En cada restaurante podés ver el menú ofrecido antes de comprar.</li>
+    </ul>
+  </div>
+
+  <div class="grid">
+
+    <!-- Bar Alemán -->
+    <div class="card">
+      <img src= "img_almuerzo/baraleman.jpg" width="300" height="200">
+      <div class="card-content">
         <h2>Bar Alemán</h2>
-        <p>Un bar bastante interesante y muy buena experiencia para disfrutar la cultura alemana con tus amigos</p>
-        <img src="img_almuerzo/baraleman.jpg" width="300" height="200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.3349447390046!2d-58.500801599999996!3d-34.5956909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb636dd99b317%3A0x1692b1b9a80d33c6!2sBar%20Alem%C3%A1n!5e0!3m2!1ses!2sar!4v1745548641974!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <br>
-        <label for="menu1">Ver menú</label>
-        <input type="checkbox" id="menu1">
-        <div class="contenido-extra">
-            <p>El menú incluye:</p>
-            <ul>
-                <li>Ravioles con salsa fileto</li>
-                <li>Capelletis Scarparo</li>
-                <li>Mousse de chocolate</li>
-                <li>Bebidas: Gaseosas linea Coca-Cola, licuados, jugo exprimido y Agua mineral y saborizada</li>
-                <li>Vino San Felipe</li>
-            </ul>
-        </div>
-    </td>
-    </tr>
-  </table>
+        <p>Tradición europea y sabores caseros: milanesas, fiambres y cerveza artesanal en un ambiente familiar.</p>
+        <a href="bar-aleman.html" class="btn">Conocer más</a>
+      </div>
+    </div>
 
-  <table>
-    <tr>
-      <td>
+    <!-- El Antojo -->
+    <div class="card">
+      <img src="img_almuerzo/el_antojo.jpg" width="300" height="200" />
+      <div class="card-content">
+        <h2>El Antojo</h2>
+        <p>Parrilla clásica con porciones abundantes. Ideal para una comida bien porteña sin vueltas.</p>
+        <a href="el-antojo.html" class="btn">Conocer más</a>
+      </div>
+    </div>
+
+    <!-- El Cuartito -->
+    <div class="card">
+      <img src= "img_almuerzo/elcuartito.jpg" width="300" height="200" />
+      <div class="card-content">
         <h2>El Cuartito</h2>
-        <p>Una de las buenas pizzas que hay en el centro de CABA y por mas que sea pequeño el lugar, sus platos son de otro mundo</p>
-        <img src="img_almuerzo/elcuartito.jpg" width="300" height="200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2515376231504!2d-58.385417600000004!3d-34.5978004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccab86411c829%3A0x284457706ae745bf!2sEl%20Cuartito!5e0!3m2!1ses!2sar!4v1745549878119!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <br>
-        <label for="menu1">Ver menú</label>
-        <input type="checkbox" id="menu1">
-        <div class="contenido-extra">
-          <p>El menú incluye:</p>
-          <ul>
-              <li>Pizza al molde</li>
-              <li>Pizza napolitana</li>
-              <li>Pizza de cebolla y queso</li>
-              <li>Bebidas: Gaseosas linea Coca-Cola y Agua mineral y saborizada</li>
-          </ul>
-        </div>
-      </td>
-    </tr>
-  </table>
+        <p>Una de las mejores pizzerías porteñas desde 1934. Ideal para almorzar con fainá y soda.</p>
+        <a href="el-cuartito.html" class="btn">Conocer más</a>
+      </div>
+    </div>
 
-  <table>
-    <tr>
-      <td>
-        <h2>Jugador N°12</h2>
-        <p>El primer bodegon donde se mezcla la pasión Xeneize con el mejor sabor argentino</p>
-        <img src="img_almuerzo/jugador12.jpg" width="300" height="200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8316.833426810808!2d-58.366853639123626!3d-34.62051229952148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3358e1ba367c7%3A0x2c6d235ae3bdb8f!2sJugador%20N%C2%BA12!5e0!3m2!1ses!2sar!4v1745552208259!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <br>
-        <label for="menu1">Ver menú</label>
-        <input type="checkbox" id="menu1">
-        <div class="contenido-extra">
-          <p>El menú incluye:</p>
-          <ul>
-              <li>Milanesa "la 12" con Guarnicion</li>
-              <li>Bife de chorizo con Guarnicion</li>
-              <li>Ravioles "Goat"</li>
-              <li>Tragos: Fernet, Campari, Vermut, Aperol</li>
-              <li>Bebidas: Gaseosas linea Coca-Cola y Agua mineral y saborizada</li>
-          </ul>
-        </div>
-      </td>
-    </tr>
-  </table>
+    <!-- Güerrin -->
+    <div class="card">
+      <img src= "img_almuerzo/guerrin.jpg" width="300" height="200" />
+      <div class="card-content">
+        <h2>Güerrin</h2>
+        <p>Una parada obligada para los amantes de la pizza al molde. Ideal para almorzar en pleno centro.</p>
+        <a href="guerrin.html" class="btn">Conocer más</a>
+      </div>
+    </div>
+
+    <!-- Jugador 12 -->
+    <div class="card">
+      <img src="img_almuerzo/jugador12.jpg" width="300" height="200" />
+      <div class="card-content">
+        <h2>Jugador 12</h2>
+        <p>Comida bien argentina con ambiente futbolero. Lomitos, empanadas y buena onda de potrero.</p>
+        <a href="jugador-12.html" class="btn">Conocer más</a>
+      </div>
+    </div>
+
+  </div>
+
+  <form id="formulario">
+    <h3>Dejanos tu opinión 🍽️</h3>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required />
+    <p id="msgNombre" style="color: red;"></p>
+
+    <label for="opinion">Tu opinión:</label>
+    <textarea id="opinion" maxlength="300" required></textarea>
+    <p id="contador">0 / 300</p>
+
+    <label>Calificación:</label>
+    <div id="estrellas">
+      <span data-valor="1">☆</span>
+      <span data-valor="2">☆</span>
+      <span data-valor="3">☆</span>
+      <span data-valor="4">☆</span>
+      <span data-valor="5">☆</span>
+    </div>
+    <input type="hidden" id="puntuacion" name="puntuacion" required />
+
+    <br />
+    <button class="btn" type="submit">Enviar</button>
+    <button class="btn" type="button" onclick="resetForm()">Limpiar</button>
+  </form>
+
+  <script>
+    const saludo = document.getElementById('saludo-js');
+    const hora = new Date().getHours();
+    if (hora < 12) saludo.textContent = '¡Buenos días!';
+    else if (hora < 18) saludo.textContent = '¡Buenas tardes!';
+    else saludo.textContent = '¡Buenas noches!';
+
+    const frases = [
+      'Nada mejor que una buena comida para levantar el día 🍝',
+      'Un almuerzo puede ser la mejor pausa del día 🍛',
+      'El sabor del mediodía se disfruta con compañía 🥩',
+      'Comer rico también es cuidarse 🥗',
+    ];
+    document.getElementById('frase-dia').textContent = frases[Math.floor(Math.random() * frases.length)];
+
+    const estrellas = document.querySelectorAll('#estrellas span');
+    const puntuacionInput = document.getElementById('puntuacion');
+    let seleccionActual = 0;
+
+    estrellas.forEach((estrella) => {
+      estrella.addEventListener('click', () => {
+        const valor = parseInt(estrella.getAttribute('data-valor'));
+        seleccionActual = valor;
+        puntuacionInput.value = valor;
+        actualizarEstrellas(valor);
+      });
+
+      estrella.addEventListener('mouseover', () => {
+        const valor = parseInt(estrella.getAttribute('data-valor'));
+        actualizarEstrellas(valor);
+      });
+
+      estrella.addEventListener('mouseout', () => {
+        actualizarEstrellas(seleccionActual);
+      });
+    });
+
+    function actualizarEstrellas(rating) {
+      estrellas.forEach((estrella) => {
+        const valor = parseInt(estrella.getAttribute('data-valor'));
+        if (valor <= rating) {
+          estrella.textContent = '⭐';
+          estrella.classList.add('seleccionada');
+        } else {
+          estrella.textContent = '☆';
+          estrella.classList.remove('seleccionada');
+        }
+      });
+    }
+
+    const opinion = document.getElementById('opinion');
+    const contador = document.getElementById('contador');
+
+    opinion.addEventListener('input', () => {
+      contador.textContent = `${opinion.value.length} / 300`;
+    });
+
+    document.getElementById('nombre').addEventListener('input', function () {
+      const mensaje = document.getElementById('msgNombre');
+      mensaje.textContent = this.value.trim() === '' ? '⚠️ El nombre es obligatorio.' : '';
+    });
+
+    document.getElementById('formulario').addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!puntuacionInput.value) {
+        alert('Por favor, seleccioná una calificación con estrellas.');
+        return;
+      }
+      alert('¡Gracias por tu opinión! 🌟');
+      resetForm();
+    });
+
+    function resetForm() {
+      document.getElementById('formulario').reset();
+      contador.textContent = '0 / 300';
+      puntuacionInput.value = '';
+      seleccionActual = 0;
+      actualizarEstrellas(0);
+      document.getElementById('msgNombre').textContent = '';
+    }
+  </script>
 </body>
 </html>
-
-
