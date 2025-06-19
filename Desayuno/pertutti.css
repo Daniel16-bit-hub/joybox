@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fffaf6;
+  background-color: #f9f7f5;
   color: #333;
   padding: 40px;
   max-width: 800px;
@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-  color: #a0522d;
+  color: #00704a;
   text-align: center;
   font-size: 2.5em;
 }
@@ -32,22 +32,22 @@ ul {
 
 .btn, .btn-sec {
   display: inline-block;
-  background: linear-gradient(145deg, #a0522d, #c36d3d);
+  background: linear-gradient(145deg, #00704a, #019e6b);
   color: white;
   text-decoration: none;
-  padding: 18px 40px;
-  border-radius: 40px;
-  font-size: 1.2em;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 1em;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
   transition: all 0.3s ease;
   border: none;
 }
 
 .btn:hover, .btn-sec:hover {
   transform: scale(1.05);
-  background: linear-gradient(145deg, #8a3f1f, #b35c2a);
+  background: linear-gradient(145deg, #005837, #018659);
 }
 
 .botones-centrados {
@@ -60,7 +60,7 @@ ul {
 }
 
 .horarios {
-  background-color: #f2e6d9;
+  background-color: #eaf3ee;
   padding: 15px 20px;
   border-radius: 15px;
   margin-top: 30px;
@@ -69,7 +69,7 @@ ul {
 
 .horarios h3 {
   margin-top: 0;
-  color: #a0522d;
+  color: #00704a;
 }
 
 iframe {
@@ -81,7 +81,7 @@ iframe {
 }
 
 .opiniones, .formulario, .reserva {
-  background-color: #fef9f4;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 15px;
   margin-top: 40px;
@@ -90,7 +90,7 @@ iframe {
 }
 
 .opiniones h3, .formulario h3, .reserva h3 {
-  color: #a0522d;
+  color: #00704a;
 }
 
 .opinion {
@@ -122,7 +122,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #a0522d;
+  background-color: #00704a;
   color: white;
   border: none;
   padding: 14px 32px;
@@ -135,7 +135,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #81411f;
+  background-color: #005837;
 }
 
 .mensaje-exito {
