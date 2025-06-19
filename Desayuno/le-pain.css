@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fffdf9;
+  background-color: #f9f7f5;
   color: #333;
   padding: 40px;
   max-width: 800px;
@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-  color: #6b4e31;
+  color: #00704a;
   text-align: center;
   font-size: 2.5em;
 }
@@ -30,21 +30,46 @@ ul {
   padding-left: 20px;
 }
 
-.btn {
+.btn, .btn-sec {
   display: inline-block;
-  background-color: #6b4e31;
+  background: linear-gradient(145deg, #00704a, #019e6b);
   color: white;
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 30px;
-  margin-top: 30px;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
   border: none;
 }
 
-.btn:hover {
-  background-color: #4f3822;
+.btn:hover, .btn-sec:hover {
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #005837, #018659);
+}
+
+.botones-centrados {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.horarios {
+  background-color: #eaf3ee;
+  padding: 15px 20px;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.horarios h3 {
+  margin-top: 0;
+  color: #00704a;
 }
 
 iframe {
@@ -55,33 +80,8 @@ iframe {
   border-radius: 15px;
 }
 
-.botones-centrados {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-.btn-sec {
-  background-color: #6b4e31;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  transition: background-color 0.3s ease;
-}
-
-.btn-sec:hover {
-  background-color: #4f3822;
-}
-
 .opiniones, .formulario, .reserva {
-  background-color: #fff9f4;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 15px;
   margin-top: 40px;
@@ -90,7 +90,7 @@ iframe {
 }
 
 .opiniones h3, .formulario h3, .reserva h3 {
-  color: #6b4e31;
+  color: #00704a;
 }
 
 .opinion {
@@ -122,7 +122,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #6b4e31;
+  background-color: #00704a;
   color: white;
   border: none;
   padding: 14px 32px;
@@ -135,7 +135,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #4f3822;
+  background-color: #005837;
 }
 
 .mensaje-exito {
